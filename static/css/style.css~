@@ -1,0 +1,234 @@
+/* style.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #b9ff66;
+    --nav-bg: #000000;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --nav-bg: #2d2d2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Header and Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    padding: 1rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*added*/
+    transition: top 0.3s ease;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover{
+    background-color: var(--primary-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* Added Transition for animation */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile Menu Button Animation */
+.mobile-menu-btn.active {
+    /* Rotate to create an X */
+    transform: rotate(90deg);
+}
+.mobile-menu-btn.active::before{
+    content: "X";
+}
+
+/* Main Content */
+main {
+    margin-top: 80px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideIn 1s ease-out forwards;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.service-card {
+    background: var(--nav-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Animations */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+.nav-menu {
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu-btn:hover {
+    color: var(--primary-color);
+}
+
+.nav-menu-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 1rem;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu.active {
+    display: block;
+    opacity: 1;
+    animation: slideDown 0.3s ease-in-out forwards;
+    transform: translateY(0);
+}
+
+.nav-menu-list:not(.active) {
+  transform: translateY(-100%);
+}
+
+
+
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+  .nav-menu-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 1rem;
+    width: 100%;
+  }
+  .nav-menu-list li {
+    margin-bottom: 1rem;
+  }
+  .nav-menu-list a {
+    color: #fff;
+  }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
