@@ -24,7 +24,7 @@ main {
 .container-about-page .container-padder {
   width: 100vw;
   padding: 80px 30px;
-  background-image: url("../images/background\ -2.png");
+  background-image: url("../img/background\ -2.png");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0 5px 6px rgb(46, 46, 46, 0.4);
