@@ -57,6 +57,10 @@ a:hover {
   color: var(--secondary-color);
 }
 
+.display-none {
+  display: none !important;
+}
+
 button {
   cursor: pointer;
   transition: 1s;
@@ -75,7 +79,7 @@ nav {
   left: 0;
   width: 100vw;
   right: 0;
-  /* position: sticky; */
+  height: 12vh;
 }
 
 .navbar-page .container-padder-nav {
@@ -108,6 +112,15 @@ nav {
 .navbar-page .container-padder-nav .container-ul .container-ul-padder {
   width: 100%;
   padding: 3px 10px;
+}
+
+.navbar-page .container-padder-nav button {
+  font-size: smaller;
+  display: none;
+  padding: 10px 20px;
+  border: 1px solid var(--darker-white-2);
+  background: white;
+  font-size: small;
 }
 
 .navbar-page .container-padder-nav .container-ul .container-ul-padder ul {
@@ -174,6 +187,7 @@ a:visited {
   border: 1px solid var(--darker-white-2);
   background: white;
   font-size: small;
+  display: block;
 }
 
 .navbar-page .container-padder-nav .container-btn button:hover {
@@ -215,6 +229,21 @@ a:visited {
   font-size: small;
 }
 
+.fixed-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Optional: Slight transparency */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  transition: all 0.3s ease-in-out;
+  z-index: 1000; /* Ensure it stays on top */
+}
 /* navbar ends ------------------- */
 
 /* body */
@@ -426,7 +455,6 @@ a:focus {
   .navbar-page .container-padder-nav {
     display: block;
     padding-top: 10px;
-    /* padding-bottom: 20px; */
   }
 
   .navbar-page .container-padder-nav .container-ul {
@@ -439,15 +467,18 @@ a:focus {
     width: 100%;
     padding: 0;
     padding-right: 5px;
+    padding-bottom: 7%;
   }
 
   .navbar-page .container-padder-nav .container-ul .container-ul-padder ul {
     display: block;
+    padding: 0 10px;
   }
 
   .navbar-page .container-padder-nav .container-ul .container-ul-padder ul li {
     padding-bottom: 10px;
     padding-top: 10px;
+    margin: 0;
   }
 
   .navbar-page
@@ -480,7 +511,7 @@ a:focus {
     ul
     li:not(:last-child) {
     border-bottom: 1px solid var(--darker-white);
-    margin-bottom: 5px;
+    padding: 20px 0;
   }
 
   .navbar-page
@@ -502,36 +533,47 @@ a:focus {
 
   .navbar-page .container-padder-nav .container-logo {
     width: 100%;
-    /* height: 8vh; */
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0;
   }
 
   .navbar-page .container-padder-nav .container-logo button {
     display: block;
     height: 100%;
     border: none;
+    margin-top: 16px;
   }
 
   .navbar-page .container-padder-nav .container-logo img {
     width: 13%;
-  }
-
-  .__collapse-sm-screen {
-    display: none !important;
-  }
-
-  .drop-nav {
-    display: block !important;
+    height: 100%;
+    margin-top: 10px;
   }
 
   .navbar-page .container-padder-nav .container-btn {
     padding-bottom: 15px;
+    display: none;
   }
 
   .navbar-page .container-padder-nav .container-btn button {
     font-size: smaller;
+  }
+
+  .navbar-page .container-padder-nav button {
+    font-size: smaller;
+    display: block;
+  }
+
+  .__collapse-sm-screen {
+    max-height: 0vh;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .active_nav {
+    max-height: 300px; /* Adjust height based on content */
   }
 
   /* navbar ends ------------------- */
@@ -570,11 +612,15 @@ a:focus {
 
   footer .container-footer-padder ul {
     display: block;
+    padding: 0;
+    margin: 0;
   }
 
   footer .container-footer-padder ul li {
     margin-bottom: 20px;
     font-size: small !important;
+    text-align: center;
+    width: 100%;
   }
   /* footer ends */
 
