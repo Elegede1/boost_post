@@ -28,29 +28,27 @@ Bootstrap5(app)
 
 
 
-
-
-
-
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", community=community, aboutus=aboutus, signup=signup, login=login, chat=chat)
 
-@app.route('/about')
-def about():
-    return render_template("about.html")
+@app.route('/community')
+def community():
+    return render_template("community.html", community=community, aboutus=aboutus, signup=signup, login=login, chat=chat)
 
+@app.route('/aboutus')
+def aboutus():
+    return render_template("aboutus.html", community=community, aboutus=aboutus, signup=signup, login=login, chat=chat)
+
+@app.route('/signin')
+def login():
+    return render_template("signin.html", community=community, aboutus=aboutus, signup=signup, login=login, chat=chat)
+@app.route('/signup')
+def signup():
+    return render_template("signup.html", community=community, aboutus=aboutus, signup=signup, login=login, chat=chat)
 @app.route('/contact')
 def contact():
     return render_template("contact.html")
-
-@app.route('/signup')
-def signup():
-    return render_template("signup.html")
-
-@app.route('/login')
-def login():
-    return render_template("login.html")
 
 
 @app.route('/chat', methods=['GET', 'POST'])
@@ -58,4 +56,5 @@ def chat():
     return render_template("chat.html")
 
 if __name__ == '__main__':
-    soketio.run(app, allow_unsafe_werkzeug=True)
+    app.run(debug=True)
+    # soketio.run(app, allow_unsafe_werkzeug=True)

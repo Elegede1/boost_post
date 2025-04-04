@@ -1,42 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boost Promotions</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
-<body>
-    <header>
-        <div class="logo">BOOST</div>
-        <nav>
-            <button class="mobile-menu-btn">☰</button>
-            <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends "base.html" %}
 
-    <main>
-        <section class="hero">
-            <h1>Navigating the digital landscape for success</h1>
-            <p>Welcome to Boost Promotions, your trusted online service partner. We provide tailored solutions, including digital marketing, branding, and web development, to help your business shine. Our team is dedicated to driving your success and delivering exceptional results.</p>
-            <button class="cta">Book a consultation</button>
-        </section>
+{% block title %}Boost Promotions - Home{% endblock %}
 
-        <section class="services-grid" id="services">
-            <div class="service-card" style="animation-delay: 0.2s">Content Marketing</div>
-            <div class="service-card" style="animation-delay: 0.4s">Graphic Design</div>
-            <div class="service-card" style="animation-delay: 0.6s">Video Editing</div>
-            <div class="service-card" style="animation-delay: 0.8s">Cloud Hosting</div>
-            <div class="service-card" style="animation-delay: 1.0s">Market Research</div>
-            <div class="service-card" style="animation-delay: 1.2s">Virtual Assistance</div>
-        </section>
-    </main>
+{% block content %}
+<!-- articles -->
+<div class="container-items">
+  <div class="container-paddder">
+    <div class="left-container">
+      <div class="articles">
+        <h1>Navigating the digital landscape for Success</h1>
+        <p>
+          Welcome to Boost Promotions, your trusted online service partner.
+          We provide tailored solutions, including digital marketing,
+          branding, and web development, to help your business shine. Our
+          team is dedicated to driving your success and
+        </p>
+      </div>
 
-    <button class="theme-toggle">🌓</button>
+      <!-- container-btn body -->
+      <div class="container-btn"><button>Book a consultant</button></div>
+    </div>
 
-    <script src="static/js/script.js"></script>
-</body>
-</html>
+    <div class="container-right-img">
+      <img src="{{ url_for('static', filename='assets/homepageimage.png') }}" alt="homepageimage" />
+    </div>
+  </div>
+</div>
+{% endblock %}
