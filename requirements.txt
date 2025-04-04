@@ -1,4 +1,4 @@
-alembic==1.14.0
+qalembic==1.14.0
 bleach==6.2.0
 blinker==1.9.0
 Bootstrap-Flask==2.4.1
