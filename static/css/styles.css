@@ -1,0 +1,654 @@
+:root {
+  --white-color: #ffffff;
+  --white-smoke: rgb(249, 249, 249);
+  --darker-white: rgb(217, 217, 217);
+  --darker-white-2: rgb(162, 162, 162);
+  --dark-font: rgb(101, 101, 101);
+  --blackish-: rgb(39, 39, 39);
+
+  --secondary-color-transparent: rgba(186, 255, 102, 0.2);
+  --secondary-color: rgba(185, 255, 102, 1);
+  --secondary-color-darker: rgb(127, 179, 63);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100vw;
+  /* overflow-x: hidden; */
+  max-width: 100vw;
+  min-width: 100vw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  transition: 1s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+.display-none {
+  display: none !important;
+}
+
+button {
+  cursor: pointer;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* navbar */
+
+nav {
+  border-bottom: 1px solid var(--darker-white);
+  background-color: var(--white-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  right: 0;
+  height: 12vh;
+}
+
+.navbar-page .container-padder-nav {
+  width: 100%;
+  display: flex;
+  padding: 2px 17px;
+  justify-content: space-between;
+}
+
+.navbar-page .container-padder-nav .container-logo {
+  width: 20%;
+  padding-left: 5%;
+}
+
+.navbar-page .container-padder-nav .container-logo button {
+  display: none;
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+.navbar-page .container-padder-nav .container-logo img {
+  width: 30%;
+}
+
+.navbar-page .container-padder-nav .container-ul {
+  width: 50%;
+  height: 100%;
+}
+
+.navbar-page .container-padder-nav .container-ul .container-ul-padder {
+  width: 100%;
+  padding: 3px 10px;
+}
+
+.navbar-page .container-padder-nav button {
+  font-size: smaller;
+  display: none;
+  padding: 10px 20px;
+  border: 1px solid var(--darker-white-2);
+  background: white;
+  font-size: small;
+}
+
+.navbar-page .container-padder-nav .container-ul .container-ul-padder ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navbar-page .container-padder-nav .container-ul .container-ul-padder ul li a {
+  display: block;
+  font-size: 14px;
+  font-weight: 100 !important;
+  color: var(--blackish-);
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 500 !important;
+}
+
+.navbar-page
+  .container-padder-nav
+  .container-ul
+  .container-ul-padder
+  ul
+  li
+  a:hover {
+  text-decoration: none;
+}
+
+.navbar-page
+  .container-padder-nav
+  .container-ul
+  .container-ul-padder
+  ul
+  li
+  a:focus,
+a:active,
+a:visited {
+  background: transparent;
+}
+
+.navbar-page
+  .container-padder-nav
+  .container-ul
+  .container-ul-padder
+  ul
+  li
+  a:active,
+a:visited {
+  background: transparent;
+}
+
+.navbar-page .container-padder-nav .container-btn {
+  width: 30%;
+  height: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-page .container-padder-nav .container-btn button {
+  padding: 10px 20px;
+  border: 1px solid var(--darker-white-2);
+  background: white;
+  font-size: small;
+  display: block;
+}
+
+.navbar-page .container-padder-nav .container-btn button:hover {
+  background-color: var(--secondary-color-transparent);
+}
+
+.navbar-page .container-padder-nav .container-btn button:focus {
+  background-color: var(--secondary-color);
+}
+
+/* under-div */
+
+.container-user-under-div {
+  border-bottom: 0.1px solid var(--darker-white);
+  width: 100vw;
+  background-color: var(--secondary-color);
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-user-under-div .container-left--nav {
+  width: 70%;
+}
+
+.container-user-under-div .container-right--nav {
+  width: 30%;
+}
+
+.container-user-under-div .container-left--nav {
+  padding-left: 20px !important;
+}
+
+.container-user-under-div .container-left--nav,
+.container-right--nav p {
+  margin: 0;
+  padding: 0;
+  color: var(--darker-white-2);
+  font-size: small;
+}
+
+.fixed-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Optional: Slight transparency */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  transition: all 0.3s ease-in-out;
+  z-index: 1000; /* Ensure it stays on top */
+}
+/* navbar ends ------------------- */
+
+/* body */
+.container-items {
+  width: 100vw;
+}
+
+.container-items .container-paddder {
+  width: 100%;
+  height: 100%;
+  padding-left: 5%;
+  padding-top: 7%;
+  padding-bottom: 5%;
+}
+
+.container-items .container-paddder .left-container .articles {
+  width: 100%;
+}
+
+.container-items .container-paddder .left-container {
+  width: 50%;
+  float: left;
+  padding-right: 20px;
+}
+
+.container-items .container-paddder .left-container .articles h1 {
+  font-size: 55px;
+}
+
+.container-items .container-paddder .left-container .articles p {
+  font-size: 20px;
+  color: rgb(109, 109, 109);
+}
+
+.container-items .container-paddder .container-btn {
+  margin-top: 5%;
+}
+
+.container-items .container-paddder .container-btn button {
+  background: transparent;
+  padding: 20px 30px;
+  font-size: 16px;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  border: none;
+}
+
+.container-items .container-paddder .container-btn button:hover {
+  background-color: rgb(82, 82, 82);
+}
+
+.container-items .container-paddder .container-btn button:focus {
+  background: transparent;
+  border: 1px solid rgb(82, 82, 82);
+  color: rgb(32, 32, 32);
+}
+
+.container-items .container-paddder .container-right-img {
+  width: 50%;
+  float: right;
+}
+
+.container-items .container-paddder .container-right-img img {
+  width: 90%;
+}
+
+/* body ends---------------------- */
+
+/* footer */
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  float: none;
+  clear: both;
+  border-top: 1px solid rgb(217, 217, 217);
+  clear: both;
+}
+
+footer .container-footer-padder {
+  padding: 10px;
+  width: 100%;
+}
+
+footer .container-footer-padder ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer .container-footer-padder ul li a {
+  color: rgb(101, 101, 101);
+  text-shadow: 0px 1px 1px #474747;
+  font-size: small;
+}
+/* footer end -------------------- */
+
+/* Aside nav */
+
+.container-aside-items- {
+  width: 20vw;
+  box-shadow: 2px 0px 3px rgb(46, 46, 46, 0.1);
+  left: 0;
+  top: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--white-color);
+  position: sticky;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container-aside-items- input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 15px 30px;
+  box-shadow: 0 3px 5px rgb(46, 46, 46, 0.1);
+  font-size: 14px;
+  font-size: 15px;
+}
+
+.container-aside-items- input::placeholder {
+  font-size: 15px;
+  color: var(--dark-font);
+}
+
+.container-aside-items- ul {
+  margin-top: 20%;
+  font-size: 15px;
+  width: 100%;
+  padding: 0;
+}
+
+.container-aside-items- ul p {
+  font-size: 13px;
+  width: 100%;
+  color: var(--darker-white-2);
+  text-align: left;
+  padding: 0 30px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container-aside-items- ul .NAVIGATOR {
+  margin-top: 10%;
+}
+
+.container-aside-items- ul li {
+  margin-bottom: 2%;
+}
+
+.container-aside-items- ul li a {
+  display: block;
+  padding: 13px 28px;
+  color: var(--blackish-);
+  font-weight: 500 !important;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.container-aside-items- ul li a i {
+  margin-right: 10px;
+}
+
+/* dev design */
+.container-aside-items- ul li:nth-child(2) a {
+  background-color: var(--secondary-color-transparent);
+  color: var(--secondary-color-darker);
+}
+/* ------------- */
+
+.container-aside-items- ul li a:hover {
+  background-color: var(--secondary-color-transparent);
+  color: var(--secondary-color-darker);
+}
+
+.container-aside-items- ul li a:focus {
+  background-color: var(--secondary-color-transparent) !important;
+  color: var(--secondary-color-darker);
+}
+
+/* .container-aside-items- ul li a:visited,
+a:active,
+a:focus {
+  background-color: var(--secondary-color-transparent);
+  color: var(--secondary-color-darker);
+} */
+
+/* ------------ ends */
+
+@media only screen and (min-width: 969px) {
+  nav {
+    height: 10vh;
+  }
+}
+
+@media only screen and (max-width: 1048px) {
+  .container-aside-items- {
+    width: 70vw;
+    margin-left: -120%;
+    display: none;
+  }
+}
+
+/* responsiveness */
+@media only screen and (max-width: 968px) {
+  /* navbar */
+  .navbar-page .container-padder-nav {
+    display: block;
+    padding-top: 10px;
+  }
+
+  .navbar-page .container-padder-nav .container-ul {
+    width: 100%;
+    margin-top: 6%;
+    padding: 0;
+  }
+
+  .navbar-page .container-padder-nav .container-ul .container-ul-padder {
+    width: 100%;
+    padding: 0;
+    padding-right: 5px;
+    padding-bottom: 7%;
+  }
+
+  .navbar-page .container-padder-nav .container-ul .container-ul-padder ul {
+    display: block;
+    padding: 0 10px;
+  }
+
+  .navbar-page .container-padder-nav .container-ul .container-ul-padder ul li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .navbar-page
+    .container-padder-nav
+    .container-ul
+    .container-ul-padder
+    ul
+    li
+    a:focus,
+  a:active,
+  a:visited {
+    border: none;
+  }
+
+  .navbar-page
+    .container-padder-nav
+    .container-ul
+    .container-ul-padder
+    ul
+    li
+    a:active,
+  a:visited {
+    border: none;
+  }
+
+  .navbar-page
+    .container-padder-nav
+    .container-ul
+    .container-ul-padder
+    ul
+    li:not(:last-child) {
+    border-bottom: 1px solid var(--darker-white);
+    padding: 20px 0;
+  }
+
+  .navbar-page
+    .container-padder-nav
+    .container-ul
+    .container-ul-padder
+    ul
+    li
+    a {
+    font-size: small;
+  }
+
+  .navbar-page .container-padder-nav .container-btn {
+    width: 100%;
+    display: inherit;
+    justify-content: left;
+    padding-left: 20px;
+  }
+
+  .navbar-page .container-padder-nav .container-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .navbar-page .container-padder-nav .container-logo button {
+    display: block;
+    height: 100%;
+    border: none;
+    margin-top: 16px;
+  }
+
+  .navbar-page .container-padder-nav .container-logo img {
+    width: 13%;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar-page .container-padder-nav .container-btn {
+    padding-bottom: 15px;
+    display: none;
+  }
+
+  .navbar-page .container-padder-nav .container-btn button {
+    font-size: smaller;
+  }
+
+  .navbar-page .container-padder-nav button {
+    font-size: smaller;
+    display: block;
+  }
+
+  .__collapse-sm-screen {
+    max-height: 0vh;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .active_nav {
+    max-height: 300px; /* Adjust height based on content */
+  }
+
+  /* navbar ends ------------------- */
+
+  /* body */
+  .container-items .container-paddder .articles {
+    width: 100%;
+    padding-top: 5% !important;
+  }
+
+  .container-items .container-paddder .left-container .articles h1 {
+    font-size: 39px;
+  }
+
+  .container-items .container-paddder .left-container .articles p {
+    font-size: 17px;
+  }
+
+  .container-items .container-paddder .left-container {
+    width: 100%;
+    float: none;
+  }
+
+  .container-items .container-paddder .container-right-img {
+    width: 100%;
+    float: none;
+    margin-top: 5%;
+  }
+
+  .container-items .container-paddder .container-right-img img {
+    width: 90%;
+  }
+  /* body end ----------------- */
+
+  /* footer  */
+
+  footer .container-footer-padder ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  footer .container-footer-padder ul li {
+    margin-bottom: 20px;
+    font-size: small !important;
+    text-align: center;
+    width: 100%;
+  }
+  /* footer ends */
+
+  /* aside nav */
+  .container-aside-items- {
+    width: 70vw;
+    margin-left: -120%;
+    display: none;
+  }
+
+  .container-aside-right- {
+    margin-left: 0 !important;
+    display: block !important;
+    left: 0;
+  }
+
+  .container-aside-items- input {
+    margin-top: 30%;
+  }
+  /* --------------- */
+}
+
+/* smaller screen */
+@media only screen and (max-width: 568px) {
+  /* body */
+  .container-items .container-paddder .articles {
+    width: 100%;
+    padding-top: 35%;
+  }
+  /* ------------ */
+}

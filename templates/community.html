@@ -1,0 +1,405 @@
+{% extends 'base.html' %}
+{% block title %}Community{% endblock %}
+{% block extra_head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/community.css') }}" />
+{% endblock %}
+{% block content %}
+    <div class="container-nav">
+      <div class="container-user-under-div">
+        <div class="container-left--nav">
+          <p>Boost Promotions community</p>
+        </div>
+        <div class="container-right--nav"></div>
+      </div>
+    </div>
+    <!-- navbar ends -->
+
+    <section class="section-community">
+      <!-- Aside nav -->
+      <aside>
+        <div class="container-aside-items-">
+          <div class="container-aside-items-padder">
+            <input type="search" placeholder="search" />
+
+            <ul>
+              <p>Menu</p>
+
+              <li>
+                <a href="#"><i class="fa fa-bars"></i>Questions</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-tag"></i> Tags</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-medal"></i> Ranking</a>
+              </li>
+
+              <p class="NAVIGATOR">PERSONAL NAVIGATOR</p>
+
+              <li>
+                <a href="#"><i class="fa fa-question"></i> Your questions</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-comment"></i> Your answers</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-heart"></i> Your likes & votes</a>
+              </li>
+
+              <p class="NAVIGATOR">OTHERS</p>
+
+              <li>
+                <a href="#"><i class="fa fa-user-circle"></i> Profile</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- articles -->
+      <main>
+        <div class="container-main-section">
+          <div class="container-padder-community-page">
+            <header class="container-header-community">
+              <a href="#"><i class="fa fa-clock"></i> New</a>
+              <a href="#"><i class="fa fa-arrow-up"></i> Top</a>
+              <a href="#"><i class="fa fa-fire"></i> Hot</a>
+              <a href="#"><i class="fa fa-close"></i> Closed</a>
+            </header>
+
+            <div class="container-two-community-container">
+              <div class="container-1-inner-container--two -guild-line-terms-1">
+                <div class="padder">
+                  <div class="container-articles-items">
+                    <div class="container-2-----">
+                      <strong><p>Must-read posts</p></strong>
+
+                      <ul>
+                        <li>
+                          Please read rules before you start working on a
+                          platform
+                        </li>
+                        <li>Vision & Strategy of Alemhelp</li>
+                      </ul>
+                    </div>
+
+                    <div class="container-1----" style="margin-top: 8%">
+                      <strong><p>Featured links</p></strong>
+
+                      <ul>
+                        <li>Alemhelp source-code on GitHub</li>
+                        <li>Golang best-practices</li>
+                        <li><a href="#">Alem.School</a> dashboard</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container-1-inner-container--">
+                <div class="padder---">
+                  <div class="container-form--community">
+                    <form action="#" method="#">
+                      <div class="container-question-input">
+                        <div class="container-img-user-form-profile">
+                          <a href="#">
+                            <img
+                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              alt="profile"
+                              width="40"
+                              style="border-radius: 100px"
+                            />
+                          </a>
+                        </div>
+
+                        <div class="usr-question">
+                          <input
+                            type="text"
+                            name="question"
+                            placeholder="Question"
+                            class="community-question-box"
+                          />
+                        </div>
+                      </div>
+                      <textarea
+                        name="description"
+                        placeholder="Describe your question"
+                        class="community-question-box"
+                        id="text-area"
+                      ></textarea>
+
+                      <div class="container-bottom-submit-form">
+                        <div class="container-left--form">
+                          <ul>
+                            <li>
+                              <a href="#"><i class="fa fa-image"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-camera"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-folder"></i></a>
+                            </li>
+                            <li>
+                              <a href="#"><i class="fa fa-smile"></i></a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="container-right">
+                          <select name="category" id="category">
+                            <option value="Category">Category</option>
+                          </select>
+                          <button>
+                            <i class="fa fa-paper-plane"></i> Publish
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="container-reveals-header">
+                    <p class="Reveals">Reveals from users</p>
+                    <!-- <i class="fa fa-ellipsis-h" style="cursor: pointer"></i> -->
+                    <span>sort by <i class="fa fa-chevron-down"></i></span>
+                  </div>
+
+                  <!-- qustions -->
+                  <div class="container-form--community question-container">
+                    <div class="container-user-details">
+                      <div class="container--1-left">
+                        <div class="container-img">
+                          <a href="#">
+                            <img
+                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              alt="profile"
+                              width="30"
+                              style="border-radius: 100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="container-user-details">
+                          <a href="#">
+                            <p class="username">Golanginya</p>
+                          </a>
+                          <p class="date">5 min ago</p>
+                        </div>
+                      </div>
+                      <div class="container-2-mini-right-navigator">
+                        <strong>
+                          <i
+                            class="fa fa-ellipsis-v"
+                            style="cursor: pointer"
+                          ></i>
+                        </strong>
+                      </div>
+                    </div>
+
+                    <article>
+                      <strong>
+                        <p>How to patch KDE on FreeBSD?</p>
+                      </strong>
+
+                      <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat aliquet maecenas ut sit nulla
+                      </p>
+                    </article>
+
+                    <div class="container-footer-quistion">
+                      <div class="container-skills">
+                        <ul>
+                          <li>java</li>
+                          <li>javascript</li>
+                          <li>python</li>
+                        </ul>
+                      </div>
+                      <div class="container-question-details">
+                        <ul>
+                          <li>
+                            <a href="#"><i class="fa fa-eye"></i> 128</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-mail-reply"></i> 24</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-arrow-up"></i> 53</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container-form--community question-container">
+                    <div class="container-user-details">
+                      <div class="container--1-left">
+                        <div class="container-img">
+                          <a href="#">
+                            <img
+                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              alt="profile"
+                              width="30"
+                              style="border-radius: 100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="container-user-details">
+                          <a href="#">
+                            <p class="username">Golanginya</p>
+                          </a>
+                          <p class="date">5 min ago</p>
+                        </div>
+                      </div>
+                      <div class="container-2-mini-right-navigator">
+                        <strong>
+                          <i
+                            class="fa fa-ellipsis-v"
+                            style="cursor: pointer"
+                          ></i>
+                        </strong>
+                      </div>
+                    </div>
+
+                    <article>
+                      <strong>
+                        <p>How to patch KDE on FreeBSD?</p>
+                      </strong>
+
+                      <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat aliquet maecenas ut sit nulla
+                      </p>
+                    </article>
+
+                    <div class="container-footer-quistion">
+                      <div class="container-skills">
+                        <ul>
+                          <li>java</li>
+                          <li>javascript</li>
+                          <li>python</li>
+                        </ul>
+                      </div>
+                      <div class="container-question-details">
+                        <ul>
+                          <li>
+                            <a href="#"><i class="fa fa-eye"></i> 128</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-mail-reply"></i> 24</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-arrow-up"></i> 53</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container-form--community question-container">
+                    <div class="container-user-details">
+                      <div class="container--1-left">
+                        <div class="container-img">
+                          <a href="#">
+                            <img
+                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              alt="profile"
+                              width="30"
+                              style="border-radius: 100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="container-user-details">
+                          <a href="#">
+                            <p class="username">Golanginya</p>
+                          </a>
+                          <p class="date">5 min ago</p>
+                        </div>
+                      </div>
+                      <div class="container-2-mini-right-navigator">
+                        <strong>
+                          <i
+                            class="fa fa-ellipsis-v"
+                            style="cursor: pointer"
+                          ></i>
+                        </strong>
+                      </div>
+                    </div>
+
+                    <article>
+                      <strong>
+                        <p>How to patch KDE on FreeBSD?</p>
+                      </strong>
+
+                      <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat aliquet maecenas ut sit nulla
+                      </p>
+                    </article>
+
+                    <div class="container-footer-quistion">
+                      <div class="container-skills">
+                        <ul>
+                          <li>java</li>
+                          <li>javascript</li>
+                          <li>python</li>
+                        </ul>
+                      </div>
+                      <div class="container-question-details">
+                        <ul>
+                          <li>
+                            <a href="#"><i class="fa fa-eye"></i> 128</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-mail-reply"></i> 24</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-arrow-up"></i> 53</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--  -->
+                </div>
+              </div>
+
+              <div class="container-1-inner-container--two -guild-line-terms">
+                <div class="padder">
+                  <div class="container-articles-items">
+                    <div class="container-2-----">
+                      <strong><p>Must-read posts</p></strong>
+
+                      <ul>
+                        <li>
+                          Please read rules before you start working on a
+                          platform
+                        </li>
+                        <li>Vision & Strategy of Alemhelp</li>
+                      </ul>
+                    </div>
+
+                    <div class="container-1----" style="margin-top: 15%">
+                      <strong><p>Featured links</p></strong>
+
+                      <ul>
+                        <li>Alemhelp source-code on GitHub</li>
+                        <li>Golang best-practices</li>
+                        <li><a href="#">Alem.School</a> dashboard</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+          </div>
+        </div>
+      </main>
+      <!-- ------------------ -->
+    </section>
+
+{% endblock %}

@@ -1,0 +1,318 @@
+:root {
+  --white-color: #ffffff;
+  --white-smoke: rgb(249, 249, 249);
+  --darker-white: rgb(217, 217, 217);
+  --darker-white-2: rgb(162, 162, 162);
+  --dark-font: rgb(101, 101, 101);
+  --blackish-: rgb(39, 39, 39);
+
+  --secondary-color-transparent: rgba(186, 255, 102, 0.2);
+  --secondary-color: rgba(185, 255, 102, 1);
+  --secondary-color-darker: rgb(127, 179, 63);
+}
+
+main {
+  padding-top: 2%;
+}
+
+.container-about-page {
+  width: 100vw;
+  height: auto;
+  padding: 20px 0;
+}
+
+.container-about-page .container-padder {
+  width: 100vw;
+  padding: 80px 30px;
+  background-image: url("../img/background\ -2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 5px 6px rgb(46, 46, 46, 0.4);
+}
+
+.container-about-page .container-padder .container-articles {
+  width: 100%;
+  text-align: center;
+}
+
+.container-about-page .container-padder .container-articles h1 {
+  font-size: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  color: var(--white-color);
+}
+
+.container-about-page .container-padder .container-input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container-about-page .container-padder .container-input .container-ptch {
+  display: flex;
+  justify-content: center;
+  height: 55px;
+  width: 70%;
+  box-shadow: 0 2px 3px rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+.container-about-page .container-padder .container-input .send-sm {
+  background-color: white;
+  border: 1px solid var(--darker-white);
+  height: 100%;
+}
+
+.container-about-page .container-padder .container-input button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 10%;
+  border-left: none !important;
+  outline: none;
+  color: var(--darker-white-2);
+  font-size: medium;
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.container-about-page .container-padder .container-input input {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 0 20px;
+  width: 90%;
+  border-right: none !important;
+  outline: none;
+  font-size: 17px;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--dark-font);
+}
+
+.container-about-page .container-padder .container-input input::placeholder {
+  font-weight: 600;
+  color: var(--dark-font);
+}
+
+/* faq */
+.container-faq_ {
+  width: 100vw;
+}
+
+.container-faq_ .container-faq_padder {
+  width: 100%;
+  padding: 1% 30px;
+  padding-bottom: 5%;
+}
+
+.container-faq_ .container-faq_padder .container-fluid-items-faq {
+  padding: 1px 40px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  padding-bottom: 40px;
+  box-shadow: 0 5px 5px rgb(46, 46, 46, 0.4);
+}
+
+.container-faq_ .container-faq_padder .container-fluid-items-faq .header-txt {
+  font-size: 25px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .header-txt
+  p {
+  font-size: 16px;
+  text-align: left;
+  margin: 0;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .header-txt
+  strong
+  p {
+  font-size: 20px;
+  padding: 0;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .container-fags-qa {
+  background-color: var(--blackish-);
+  cursor: pointer;
+  width: 49%;
+  border-radius: 20px;
+  height: 60%;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .container-fags-qa:hover {
+  opacity: 0.9;
+}
+
+.container-parent-faqs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .container-fags-qa
+  .container-padder-qa {
+  color: var(--secondary-color);
+  padding: 1px 20px;
+  width: 100%;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .container-fags-qa
+  .container-padder-qa
+  h4 {
+  font-size: 16px;
+}
+
+.container-faq_
+  .container-faq_padder
+  .container-fluid-items-faq
+  .container-items--
+  .container-fags-qa
+  .container-padder-qa
+  .container-a {
+  color: var(--darker-white);
+  display: none;
+  padding-bottom: 17px;
+}
+
+.display-Faq {
+  display: block !important;
+}
+
+.-container-second-faq {
+  margin-top: 5%;
+}
+
+.--decrese-height {
+  height: 60%;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    padding-top: 15%;
+  }
+
+  /* .container-about-page .container-padder .container-input input {
+    width: 90%;
+  } */
+
+  .container-about-page .container-padder .container-input .container-ptch {
+    height: 45px;
+  }
+
+  .container-about-page .container-padder .container-input button {
+    width: 20%;
+  }
+
+  .container-about-page .container-padder .container-articles h1 {
+    font-size: 26px;
+  }
+
+  /* faq */
+  .container-parent-faqs {
+    display: block;
+    justify-content: safe;
+  }
+
+  .container-faq_
+    .container-faq_padder
+    .container-fluid-items-faq
+    .container-items--
+    .container-fags-qa {
+    width: 100%;
+  }
+
+  .container-faq_
+    .container-faq_padder
+    .container-fluid-items-faq
+    .container-items--
+    .container-fags-qa:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  .container-faq_
+    .container-faq_padder
+    .container-fluid-items-faq
+    .container-items--
+    .container-fags-qa
+    .container-padder-qa
+    h4 {
+    font-size: 14px;
+  }
+
+  .container-faq_
+    .container-faq_padder
+    .container-fluid-items-faq
+    .container-items--
+    .header-txt
+    strong
+    p {
+    font-size: 15px;
+  }
+
+  .container-faq_
+    .container-faq_padder
+    .container-fluid-items-faq
+    .container-items--
+    .header-txt
+    p {
+    font-size: 14px;
+  }
+
+  .container-faq_
+    .container-faq_padder
+    .container-fluid-items-faq
+    .container-items--
+    .container-fags-qa
+    .container-padder-qa
+    .container-a {
+    font-size: 13px;
+  }
+
+  .container-faq_ .container-faq_padder .container-fluid-items-faq .header-txt {
+    font-size: 25px;
+  }
+
+  .container-faq_ .container-faq_padder .container-fluid-items-faq {
+    padding: 10px 15px !important;
+  }
+
+  .container-faq_ .container-faq_padder {
+    padding: 10px 5px !important;
+    padding-bottom: 20px;
+  }
+
+  .container-faq_ .container-faq_padder {
+    padding: 1% 20px;
+  }
+
+  .container-about-page .container-padder .container-input .container-ptch {
+    width: 90%;
+  }
+}
