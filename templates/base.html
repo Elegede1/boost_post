@@ -6,6 +6,10 @@
     <title>{% block title %}Boost Promotions{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/authentication.css') }}" />
+    <!-- Socket.IO client library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+
     <script
       src="https://kit.fontawesome.com/8c2a9fb083.js"
       crossorigin="anonymous"
@@ -19,7 +23,7 @@
       <div class="container-padder-nav">
         <!-- logo -->
         <div class="container-logo">
-          <a href="#"
+          <a href="{{ url_for('index') }}"
             ><img src="{{ url_for('static', filename='assets/boostpostlogo.png') }}" alt="boostpostlogo"
           /></a>
 
@@ -51,7 +55,13 @@
           </div>
         </div>
       </div>
-      <div class="container-user-under-div"></div>
+
+      <div class="container-user-under-div">
+        <div class="container-left--nav">
+          <p></p>
+        </div>
+        <div class="container-right--nav"></div>
+      </div>
     </nav>
     <!-- navbar ends -->
 
