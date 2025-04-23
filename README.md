@@ -1,38 +1,36 @@
-## start up project
+## Start-Up Project
 
-run npm install in the root folder inside of the folder of the design folder in design branch to install all necessary dependency
-You can actually add folders or files the scss folder depending on the use/need
+This project uses SCSS and TailwindCSS for styling. Follow the steps below to get everything set up.
 
-```bash
-cd design
-```
+## Installation
 
-<h1>&</h1>
+Make sure you're on the `design` branch and located in the **root folder** of the project. Then install the project dependencies using:
 
 ```bash
 npm install
 ```
 
-# To run the script dep
 
-- using scss run
+## To Run the Scripts
+On the `design` branch, you need to run both scripts below to compile the styles properly.
+
+- Compile SCSS
 
 ```bash
 npm run scss
 ```
 
-this runs the scss to compile files to one css file
+This script compiles the SCSS files into a single CSS file.
 
 ---
 
-inside of the design branch
 
-- using tailwindcss run
+- Run TailwindCSS
 
 ```bash
 npm run tailwindcss
 ```
 
-this runs the tailwind cli
+This script runs the Tailwind CLI to generate utility-based CSS.
 
----
+You can now add or edit folders and files in the `scss` folder depending on your needs.
