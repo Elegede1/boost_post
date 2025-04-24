@@ -3,7 +3,7 @@
     height: 25px;
   }
 
-  @media only screen and (max-width: 1160px) {
+  @media only screen and (max-width: 1235px) {
     .header-inner {
       padding: 15px 20px;
 
@@ -13,9 +13,14 @@
     }
 
     .logo {
-      svg {
-        width: 66px;
-        height: 59px;
+      height: 55px;
+      margin-left: -5.5px;
+      .logo-wrapper {
+        height: 108px;
+        svg {
+          width: 132px;
+          height: 113px;
+        }
       }
     }
 
@@ -31,9 +36,14 @@
 
   @media only screen and (max-width: 690px) {
     .logo {
-      svg {
-        width: 44px;
-        height: 39px;
+      height: 37px;
+      margin-left: -4px;
+      .logo-wrapper {
+        height: 72px;
+        svg {
+          width: 88px;
+          height: 75px;
+        }
       }
     }
 
