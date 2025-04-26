@@ -1,10 +1,59 @@
-{% extends 'base.html' %}
-{% block title %}Community{% endblock %}
-{% block extra_head %}
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/community.css') }}" />
-{% endblock %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boost Promotions community section</title>
+    <link rel="stylesheet" href="../asset/styles/styles.css" />
+    <link rel="stylesheet" href="../asset/styles/community.css" />
+    <link rel="stylesheet" href="../asset/styles/font-awesome.min.css" />
+
+    <script
+      src="https://kit.fontawesome.com/8c2a9fb083.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
     <div class="container-nav">
+      <nav class="navbar-page">
+        <!-- navbar -->
+        <div class="container-padder-nav">
+          <!-- logo -->
+          <div class="container-logo">
+            <a href="#"
+              ><img src="../asset/img/boostpostlogo.png" alt="boostpostlogo"
+            /></a>
+
+            <button class="btn--navbar">
+              <i class="fa fa-bars"></i><i class="fa fa-close display-none"></i>
+            </button>
+          </div>
+
+          <!-- container for ul -->
+          <div class="container-ul __collapse-sm-screen">
+            <div class="container-ul-padder">
+              <ul>
+                <li><a href="./aboutus.html">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="./community.html">Community</a></li>
+                <li><a href="#">work</a></li>
+              </ul>
+
+              <div class="container-btn-padder">
+                <button>Book a Service</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- btn-container -->
+          <div class="container-btn __collapse-sm-screen">
+            <div class="container-btn-padder">
+              <button>Book a Service</button>
+            </div>
+          </div>
+        </div>
+      </nav>
       <div class="container-user-under-div">
         <div class="container-left--nav">
           <p>Boost Promotions community</p>
@@ -107,7 +156,7 @@
                         <div class="container-img-user-form-profile">
                           <a href="#">
                             <img
-                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              src="../asset/img/profile-img.jpg"
                               alt="profile"
                               width="40"
                               style="border-radius: 100px"
@@ -173,7 +222,7 @@
                         <div class="container-img">
                           <a href="#">
                             <img
-                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              src="../asset/img/profile-img.jpg"
                               alt="profile"
                               width="30"
                               style="border-radius: 100px"
@@ -238,7 +287,7 @@
                         <div class="container-img">
                           <a href="#">
                             <img
-                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              src="../asset/img/profile-img.jpg"
                               alt="profile"
                               width="30"
                               style="border-radius: 100px"
@@ -303,7 +352,72 @@
                         <div class="container-img">
                           <a href="#">
                             <img
-                              src="{{ url_for('static', filename='assets/profile-img.jpg') }}"
+                              src="../asset/img/profile-img.jpg"
+                              alt="profile"
+                              width="30"
+                              style="border-radius: 100px"
+                            />
+                          </a>
+                        </div>
+                        <div class="container-user-details">
+                          <a href="#">
+                            <p class="username">Golanginya</p>
+                          </a>
+                          <p class="date">5 min ago</p>
+                        </div>
+                      </div>
+                      <div class="container-2-mini-right-navigator">
+                        <strong>
+                          <i
+                            class="fa fa-ellipsis-v"
+                            style="cursor: pointer"
+                          ></i>
+                        </strong>
+                      </div>
+                    </div>
+
+                    <article>
+                      <strong>
+                        <p>How to patch KDE on FreeBSD?</p>
+                      </strong>
+
+                      <p class="description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consequat aliquet maecenas ut sit nulla
+                      </p>
+                    </article>
+
+                    <div class="container-footer-quistion">
+                      <div class="container-skills">
+                        <ul>
+                          <li>java</li>
+                          <li>javascript</li>
+                          <li>python</li>
+                        </ul>
+                      </div>
+                      <div class="container-question-details">
+                        <ul>
+                          <li>
+                            <a href="#"><i class="fa fa-eye"></i> 128</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-mail-reply"></i> 24</a>
+                          </li>
+                          <li>
+                            <a href="#"><i class="fa fa-arrow-up"></i> 53</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="container-form--community question-container">
+                    <div class="container-user-details">
+                      <div class="container--1-left">
+                        <div class="container-img">
+                          <a href="#">
+                            <img
+                              src="../asset/img/profile-img.jpg"
                               alt="profile"
                               width="30"
                               style="border-radius: 100px"
@@ -402,4 +516,20 @@
       <!-- ------------------ -->
     </section>
 
-{% endblock %}
+    <!-- footer -->
+    <footer>
+      <div class="container-footer-padder">
+        <ul>
+          <li><a href="#">Content Marketing</a></li>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">Video Editing</a></li>
+          <li><a href="#">Cloud Hosting</a></li>
+          <li><a href="#">Market Research</a></li>
+          <li><a href="#">Virtual Assitance</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="../asset/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-snippet {
+  font-family: "Snippet", sans-serif;
+}
+
+@font-face {
+  font-family: "Telegraf";
+  font-weight: 200;
+  src: url("../fonts/telegraf/Telegraf\ UltraLight\ 200.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Telegraf";
+  font-weight: normal;
+  src: url("../fonts/telegraf/TelegrafRegular_272984568a25d8528fe2de8b20b29011.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "Telegraf";
+  font-weight: 800;
+  src: url("../fonts/telegraf/Telegraf\ UltraBold\ 800.woff") format("woff");
+}
+
+.font-telegraf {
+  font-family: "Telegraf", sans-serif;
+}

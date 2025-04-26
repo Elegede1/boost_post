@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omni Digitals</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../static/css/main.css" />
     <link rel="stylesheet" href="../static/css/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,23 +14,22 @@
     />
   </head>
   <body>
-    <div
-      id="home-page"
-      class="min-h-screen flex flex-col gap-y-[32px] justify-between"
-    >
-      <!-- HEADER LAYOUT -->
-      <header
-        id="layout-page-header"
-        class="fixed top-0 left-0 w-full flex justify-center bg-white"
-      >
-        <div class="max-w-[1920px] w-full">
-          <div
-            id="header-white-container"
-            class="header-inner flex items-center justify-between pl-[36px] pr-[66px] transition-[padding-block] ease-in duration-[300ms] py-[24px]"
-          >
-            <div class="logo flex items-center justify-center h-[62px]">
+    <div id="signup-page" class="md:bg-[#B9FF66] flex justify-center">
+      <div class="max-w-[1920px] w-full">
+        <div
+          class="grid lg:grid-cols-[42%_58%] md:grid-cols-[80%] grid-cols-[100%] justify-center min-h-screen"
+        >
+          <div class="p-[115px_23px_0px_35px] lg:block hidden">
+            <h2
+              class="text-[50px]/[60px] text-white tracking-[2px] text-shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+            >
+              Want to run ads for your business?
+              <span class="text-black block">Omni Digitals</span> will help you.
+            </h2>
+
+            <div class="logo flex items-center h-[144px] mt-[155px] ml-[75px]">
               <div
-                class="logo-wrapper h-[121px] overflow-hidden flex justify-center"
+                class="logo-wrapper h-[282px] overflow-hidden flex justify-center"
               >
                 <svg
                   width="148"
@@ -39,6 +38,7 @@
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                  class="w-[346px] h-[296px]"
                 >
                   <mask
                     id="mask0_836_778"
@@ -61,7 +61,7 @@
                       width="64.528"
                       height="64.052"
                       transform="matrix(-1 0 0 1 69.9885 27.9478)"
-                      fill="url(#pattern1_836_778)"
+                      fill="black"
                     />
                   </g>
                   <mask
@@ -102,7 +102,7 @@
                         y="47.3718"
                         width="26.048"
                         height="23.584"
-                        fill="url(#pattern3_836_778)"
+                        fill="black"
                       />
                     </g>
                   </g>
@@ -129,7 +129,7 @@
                       y="78.3312"
                       width="31.447"
                       height="14.1504"
-                      fill="url(#pattern5_836_778)"
+                      fill="black"
                     />
                   </g>
                   <mask
@@ -155,7 +155,7 @@
                       y="77.9882"
                       width="77.3862"
                       height="14.8365"
-                      fill="url(#pattern7_836_778)"
+                      fill="black"
                     />
                   </g>
                   <defs>
@@ -342,246 +342,75 @@
                 </svg>
               </div>
             </div>
-
-            <div
-              class="desktop-nav-bar text-[20px]/[28px] font-light flex items-center gap-x-[41px]"
-            >
-              <nav>
-                <ul class="flex items-center gap-x-[53.7px]">
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    About us
-                  </li>
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    Services
-                  </li>
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    Community
-                  </li>
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    Works
-                  </li>
-                </ul>
-              </nav>
-              <div>
-                <svg
-                  width="44"
-                  height="30"
-                  viewBox="0 0 44 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g filter="url(#filter0_d_338_343)">
-                    <path
-                      d="M11 6L10.9998 5.0004C10.9996 3.89567 11.8951 3 12.9998 3V3C14.1042 3 14.9996 3.89519 14.9998 4.9996L15 6M14.9994 18.5H18.4333C20.0267 18.5 20.8833 16.6282 19.8418 15.4224L19.1296 14.5978C18.2486 13.5777 17.8256 12.2404 17.9598 10.8992V10.8992C18.249 8.00848 15.979 5.5 13.0738 5.5H12.9264C10.021 5.5 7.7507 8.00849 8.03964 10.8995V10.8995C8.17366 12.2405 7.7507 13.5777 6.86986 14.5977L6.15791 15.4221C5.11645 16.6282 5.9732 18.5 7.56666 18.5H10.9994M14.9994 18.5V19C14.9994 20.1046 14.104 21 12.9994 21V21C11.8948 21 10.9994 20.1046 10.9994 19V18.5M14.9994 18.5H10.9994"
-                      fill="white"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-linejoin="round"
-                      shape-rendering="crispEdges"
-                    />
-                  </g>
-                  <g filter="url(#filter1_d_338_343)">
-                    <path
-                      d="M27 9.5L32 14.5L37 9.5"
-                      stroke="black"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_d_338_343"
-                      x="0.950317"
-                      y="2.25"
-                      width="24.0991"
-                      height="27.5"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_338_343"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_338_343"
-                        result="shape"
-                      />
-                    </filter>
-                    <filter
-                      id="filter1_d_338_343"
-                      x="16"
-                      y="0"
-                      width="32"
-                      height="32"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_338_343"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_338_343"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
-              <button
-                class="px-[35px] py-[20px] outline-[1px] outline-[#191A23] rounded-[14px]"
-              >
-                Book a service
-              </button>
-            </div>
-            <div class="mobile-nav-icon hidden">
-              <div
-                class="mobile-icon-inner w-[30px] flex flex-col gap-y-[8px]"
-                onclick="openMobileMenu()"
-              >
-                <span class="w-full h-[1px] bg-black"></span>
-                <span class="w-full h-[1px] bg-black"></span>
-                <span class="w-full h-[1px] bg-black"></span>
-              </div>
-            </div>
           </div>
           <div
-            id="header-black-container"
-            class="h-[50px] bg-black transition-[height] ease-in duration-[300ms]"
-          ></div>
-          <div
-            id="mobile-modal-container"
-            class="mobile-nav-bar hidden text-[20px]/[28px] text-white font-light fixed top-0 left-0 h-screen bg-[rgba(0,0,0,0.5)] w-[0%] overflow-hidden opacity-0"
-            onclick="handleCloseClick(event)"
+            class="flex flex-col justify-center bg-white rounded-l-[50px] lg:rounded-r-[0px] md:rounded-r-[50px] sm:p-[119px_84px_89px_106px] p-[59px_25px_150px] lg:shadow-[-3px_0_4px_rgb(0,0,0)] md:shadow-[0_0_4px_3px_rgb(0,0,0)]"
           >
-            <div
-              id="mobile-menu-container"
-              class="h-full bg-black transition-[width] ease-in duration-[300ms] overflow-auto w-[150px]"
+            <h4
+              class="sm:text-[30px]/[40px] text-[22.5px]/[30px] sm:tracking-[2.4px] tracking-[1.8px] font-black sm:text-start text-center"
             >
-              <div class="flex justify-end mb-[10px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 50 50"
-                  width="28px"
-                  height="28px"
-                  fill="white"
-                  onclick="closeMobileMenu()"
+              Sign-in
+            </h4>
+
+            <form
+              action=""
+              class="mt-[96px] flex flex-col sm:text-[16px]/[40px] text-[12px]/[30px] sm:tracking-[1.28px] tracking-[0.96px]"
+            >
+              <div class="flex flex-col gap-y-[29px]">
+                
+        
+                <div
+                  class="lg:text-[16px]/[23px] sm:text-[16px]/[30px] text-[12px]/[23px] border-b-[1px] border-[#9D9D9D]"
                 >
-                  <path
-                    d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"
+                  <label
+                    for="form-email"
+                    class="transition-[font-size] ease-in duration-[300ms]"
+                    >Email</label
+                  >
+                  <input
+                    id="form-email"
+                    name=""
+                    type="email"
+                    class="w-full outline-0"
+                    required
                   />
-                </svg>
+                </div>
+                
+                <div
+                  class="lg:text-[16px]/[23px] sm:text-[16px]/[30px] text-[12px]/[23px] border-b-[1px] border-[#9D9D9D]"
+                >
+                  <label
+                    for="form-password"
+                    class="transition-[font-size] ease-in duration-[300ms]"
+                    >Password</label
+                  >
+                  <input
+                    id="form-password"
+                    name=""
+                    type="password"
+                    class="w-full outline-0"
+                    required
+                  />
+                </div>
               </div>
-              <nav>
-                <ul class="flex flex-col gap-y-[33px]">
-                  <li>About us</li>
-                  <li>Services</li>
-                  <li>Community</li>
-                  <li>Works</li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
-      <div id="fixed-header-spacing" class="h-[166px]"></div>
 
-      <!-- MAIN CONTENT -->
-      <div class="hero-section flex justify-center">
-        <div class="layout-grid-container max-w-[1920px] w-full px-[39px]">
-          <div
-            class="grid-wrapper grid grid-cols-[42.8%_48.3%] justify-between items-center gap-y-[35px]"
-          >
-            <div class="hero-text flex flex-col gap-y-[35px]">
-              <h2 class="hero-title text-[60px]/[77px]">
-                Navigating the digital landscape for success
-              </h2>
-              <p
-                class="hero-description text-[20px]/[28px] font-light w-[93.8%]"
-              >
-                Welcome to Omni Digitals, your trusted online service partner.
-                We provide tailored solutions, including digital marketing,
-                branding, and web development, to help your business shine. Our
-                team is dedicated to driving your success and delivering
-                exceptional results.
-              </p>
               <button
-                class="hero-button w-fit text-[20px]/[28px] text-white font-light bg-black px-[35px] py-[20px] rounded-[14px]"
+                class="mt-[44px] py-[10px] w-full text-center text-white font-telegraf font-black rounded-[8px] bg-[#A5E830] cursor-pointer"
               >
-                Book a consultation
+                Login
               </button>
-            </div>
-            <div class="hero-image-wrapper">
-              <img
-                src="../static/images/Illustration.png"
-                alt="Illustration"
-                class="hero-image w-full"
-              />
-            </div>
+              <div class="text-center mt-[19px]">
+                <span
+                  >Don’t have an account? 
+                  <a href="/signup" class="text-[#A5E830] font-black"
+                    >Signup Here</a
+                  ></span
+                >
+              </div>
+            </form>
           </div>
         </div>
       </div>
-
-      <!-- FOOTER LAYOUT -->
-      <footer id="layout-page-footer" class="flex justify-center">
-        <div
-          class="services-container max-w-[1920px] w-full pl-[47px] pr-[35px] mt-[59px] mb-[46px]"
-        >
-          <div
-            class="services-list flex items-center justify-between text-[20px]/[28px] font-snippet"
-          >
-            <span>Content Marketing</span>
-            <span>Graphic Design</span>
-            <span>Video Editing</span>
-            <span>Cloud Hosting</span>
-            <span>Market Research</span>
-            <span>Virtual Assistance</span>
-          </div>
-        </div>
-      </footer>
     </div>
 
     <script src="../static/js/main.js"></script>

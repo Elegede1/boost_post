@@ -1,58 +1,84 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // getting, selcting all element we need
-  const collaspedNav = document.querySelectorAll(".__collapse-sm-screen");
-  const bringNav = document.querySelectorAll(".btn--navbar");
-  const navbar = document.querySelectorAll("nav");
+/*
 
-  // looping throught the navbar btn
-  bringNav.forEach((btnDropNav) => {
-    // listening to navbar dropdown btn
-    btnDropNav.addEventListener("click", () => {
-      console.log("toggleing Navbar class");
+BEGIN HEADER LAYOUT
 
-      btnDropNav.querySelectorAll("i").forEach((icon) => {
-        icon.classList.toggle("display-none");
-      });
+*/
 
-      // looping throught navbar collapsed divs for ->
-      collaspedNav.forEach((collapseNav) => {
-        collapseNav.classList.toggle("active_nav");
-      });
-    });
-  });
+if (document.getElementById("layout-page-header")) {
+  // Open and close mobile nav menu
 
-  const scrollThreshold = window.innerHeight * 0.3; // 30% of viewport height
+  let mobileMenu = false;
+  let baseMobileModalStyle =
+    "mobile-nav-bar hidden text-[20px]/[28px] text-white font-light fixed top-0 left-0 h-screen bg-[rgba(0,0,0,0.5)]";
+  let baseMobileMenuStyle =
+    "h-full bg-black transition-[width] ease-in duration-[300ms] overflow-auto";
+  let newMobileModalStyle;
+  let newMobileMenuStyle;
 
-  navbar.forEach((navbarC) => {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > scrollThreshold) {
-        navbarC.classList.add("fixed-navbar"); // Add class when scrolling past 30%
-      } else {
-        navbarC.classList.remove("fixed-navbar"); // Remove class when scrolling back up
-      }
-    });
-  });
-});
+  function openMobileMenu() {
+    mobileMenu = true;
+    newMobileModalStyle = baseMobileModalStyle + " w-full";
+    newMobileMenuStyle =
+      baseMobileMenuStyle + " mobile-nav-width w-[50%] p-[15px_20px]";
+    document.getElementById("mobile-modal-container").className =
+      newMobileModalStyle;
+    document.getElementById("mobile-menu-container").className =
+      newMobileMenuStyle;
+    document.body.style.overflowY = "hidden";
+  }
 
-// getting all faqs items ------------------------------------
-const faqs = document.querySelectorAll(".container-fags-qa");
+  function closeMobileMenu() {
+    mobileMenu = false;
+    newMobileModalStyle =
+      baseMobileModalStyle + " w-[0%] overflow-hidden opacity-0";
+    newMobileMenuStyle = baseMobileMenuStyle + " w-[150px]";
+    document.getElementById("mobile-modal-container").className =
+      newMobileModalStyle;
+    document.getElementById("mobile-menu-container").className =
+      newMobileMenuStyle;
+    document.body.style.overflowY = "visible";
+  }
 
-// looping each Faq container
-faqs.forEach((Faq) => {
-  const faqItem = Faq.querySelector(".container-a");
-  const otherFaq = document.querySelectorAll(".container-a");
+  function handleCloseClick(e) {
+    e.target === e.currentTarget ? closeMobileMenu() : null;
+  }
 
-  // listening to click event
-  Faq.addEventListener("click", () => {
-    otherFaq.forEach((otherfaqs) => {
-      // if not clicked faq
-      if (Faq != otherfaqs) {
-        otherfaqs.classList.remove("display-Faq");
-        Faq.classList.add("--decrese-height");
-      }
-    });
+  // Reduce navbar while scrolling
 
-    // toggling classList
-    faqItem.classList.toggle("display-Faq");
-  });
-});
+  let scrolledDown = false;
+  let baseHeaderWhiteStyle =
+    "header-inner flex items-center justify-between pl-[36px] pr-[66px] transition-[padding-block] ease-in duration-[300ms]";
+  let baseHeaderBlackStyle =
+    "h-[50px] bg-black transition-[height] ease-in duration-[300ms]";
+  let newHeaderWhiteStyle;
+  let newHeaderBlackStyle;
+
+  function handleScroll() {
+    if (window.scrollY >= 2) {
+      scrolledDown = true;
+      newHeaderWhiteStyle =
+        baseHeaderWhiteStyle + " py-[10px] reduce-container-padding";
+      newHeaderBlackStyle = baseHeaderBlackStyle + " reduce-container-height";
+      document.getElementById("header-white-container").className =
+        newHeaderWhiteStyle;
+      document.getElementById("header-black-container").className =
+        newHeaderBlackStyle;
+    } else {
+      scrolledDown = false;
+      newHeaderWhiteStyle = baseHeaderWhiteStyle + " py-[24px]";
+      newHeaderBlackStyle = baseHeaderBlackStyle;
+      document.getElementById("header-white-container").className =
+        newHeaderWhiteStyle;
+      document.getElementById("header-black-container").className =
+        newHeaderBlackStyle;
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+}
+
+/*
+
+END HEADER LAYOUT
+
+*/
