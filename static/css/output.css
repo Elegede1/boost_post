@@ -177,6 +177,9 @@
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
+  .my-\[32px\] {
+    margin-block: 32px;
+  }
   .mt-\[12px\] {
     margin-top: 12px;
   }
@@ -228,9 +231,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .h-\[1px\] {
     height: 1px;
   }
@@ -257,9 +257,6 @@
   }
   .h-\[296px\] {
     height: 296px;
-  }
-  .h-fit {
-    height: fit-content;
   }
   .h-full {
     height: 100%;
@@ -300,17 +297,11 @@
   .max-w-\[1920px\] {
     max-width: 1920px;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .grid-cols-\[42\.8\%_48\.3\%\] {
     grid-template-columns: 42.8% 48.3%;
@@ -385,10 +376,6 @@
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-b-\[1px\] {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -408,47 +395,14 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-\[0px_25px_30px\] {
-    padding: 0px 25px 30px;
-  }
-  .p-\[0px_25px_50px\] {
-    padding: 0px 25px 50px;
-  }
-  .p-\[0px_25px_60px\] {
-    padding: 0px 25px 60px;
-  }
-  .p-\[0px_25px_70px\] {
-    padding: 0px 25px 70px;
-  }
-  .p-\[0px_25px_100px\] {
-    padding: 0px 25px 100px;
-  }
-  .p-\[0px_25px_150px\] {
-    padding: 0px 25px 150px;
-  }
   .p-\[4px_11px\] {
     padding: 4px 11px;
   }
   .p-\[15px_20px\] {
     padding: 15px 20px;
   }
-  .p-\[30px_25px_0px\] {
-    padding: 30px 25px 0px;
-  }
-  .p-\[50px_25px_100px\] {
-    padding: 50px 25px 100px;
-  }
   .p-\[59px_25px\] {
     padding: 59px 25px;
-  }
-  .p-\[59px_25px_100px\] {
-    padding: 59px 25px 100px;
-  }
-  .p-\[59px_25px_120px\] {
-    padding: 59px 25px 120px;
-  }
-  .p-\[59px_25px_140px\] {
-    padding: 59px 25px 140px;
   }
   .p-\[59px_25px_150px\] {
     padding: 59px 25px 150px;
@@ -553,15 +507,8 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .outline-0 {
     outline-style: var(--tw-outline-style);
@@ -667,11 +614,6 @@
       column-gap: 85px;
     }
   }
-  .sm\:p-\[89px_84px_89px_106px\] {
-    @media (width >= 40rem) {
-      padding: 89px 84px 89px 106px;
-    }
-  }
   .sm\:p-\[89px_95px\] {
     @media (width >= 40rem) {
       padding: 89px 95px;
@@ -680,16 +622,6 @@
   .sm\:p-\[119px_84px_89px_106px\] {
     @media (width >= 40rem) {
       padding: 119px 84px 89px 106px;
-    }
-  }
-  .sm\:p-\[119px_95px_89px\] {
-    @media (width >= 40rem) {
-      padding: 119px 95px 89px;
-    }
-  }
-  .sm\:p-\[254px_84px_89px_106px\] {
-    @media (width >= 40rem) {
-      padding: 254px 84px 89px 106px;
     }
   }
   .sm\:text-start {
@@ -744,11 +676,6 @@
       grid-template-columns: 80%;
     }
   }
-  .md\:rounded-\[50px\] {
-    @media (width >= 48rem) {
-      border-radius: 50px;
-    }
-  }
   .md\:rounded-r-\[50px\] {
     @media (width >= 48rem) {
       border-top-right-radius: 50px;
@@ -776,21 +703,10 @@
       grid-template-columns: 42% 58%;
     }
   }
-  .lg\:rounded-l-\[50px\] {
-    @media (width >= 64rem) {
-      border-top-left-radius: 50px;
-      border-bottom-left-radius: 50px;
-    }
-  }
   .lg\:rounded-r-\[0px\] {
     @media (width >= 64rem) {
       border-top-right-radius: 0px;
       border-bottom-right-radius: 0px;
-    }
-  }
-  .lg\:p-\[119px_84px_89px_106px\] {
-    @media (width >= 64rem) {
-      padding: 119px 84px 89px 106px;
     }
   }
   .lg\:text-\[16px\]\/\[23px\] {
@@ -803,14 +719,6 @@
     @media (width >= 64rem) {
       --tw-shadow: -3px 0 4px var(--tw-shadow-color, rgb(0,0,0));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-    }
-  }
-  .lg\:md\:rounded-r-\[0px\] {
-    @media (width >= 64rem) {
-      @media (width >= 48rem) {
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-      }
     }
   }
 }

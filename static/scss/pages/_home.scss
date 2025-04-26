@@ -30,25 +30,19 @@
         }
       }
     }
-
-    
   }
 
   @media only screen and (max-width: 690px) {
-    .hero-section {
-      .hero-title {
-        font-size: 36px;
-        line-height: 46px;
-      }
-
-      .hero-description,
-      .hero-button {
-        font-size: 14px;
-        line-height: 20px;
-      }
+    .hero-title {
+      font-size: 36px;
+      line-height: 46px;
     }
 
-    
+    .hero-description,
+    .hero-button {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   @media only screen and (max-width: 550px) {
@@ -58,8 +52,6 @@
       }
     }
   }
-
-  
 
   @media only screen and (max-width: 350px) {
     .layout-grid-container {

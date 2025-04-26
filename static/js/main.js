@@ -4,6 +4,8 @@ BEGIN HEADER LAYOUT
 
 */
 
+// Verify if page contains header
+
 if (document.getElementById("layout-page-header")) {
   // Open and close mobile nav menu
 
