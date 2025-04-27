@@ -120,12 +120,12 @@
   }
 }
 @media only screen and (max-width: 690px) {
-  #home-page .hero-section .hero-title {
+  #home-page .hero-title {
     font-size: 36px;
     line-height: 46px;
   }
-  #home-page .hero-section .hero-description,
-  #home-page .hero-section .hero-button {
+  #home-page .hero-description,
+  #home-page .hero-button {
     font-size: 14px;
     line-height: 20px;
   }

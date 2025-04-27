@@ -24,7 +24,7 @@
             id="header-white-container"
             class="header-inner flex items-center justify-between pl-[36px] pr-[66px] transition-[padding-block] ease-in duration-[300ms] py-[24px]"
           >
-            <a href="{% url 'index' %}" class="h-full overflow-hidden">
+            <a href="{% url 'home' %}" class="h-full overflow-hidden">
               <div class="logo flex items-center justify-center h-[62px]">
                 <div
                   class="logo-wrapper h-[121px] overflow-hidden flex justify-center"
