@@ -8,6 +8,10 @@ body {
   font-family: "Snippet", sans-serif;
 }
 
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+}
+
 @font-face {
   font-family: "Telegraf";
   font-weight: 200;
