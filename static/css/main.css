@@ -145,5 +145,112 @@
   scrollbar-color: black transparent;
   scrollbar-width: thin;
 }
+#about-us-page .faq-question,
+#about-us-page .faq-answer,
+#about-us-page .faq-question-icon {
+  transition: all ease-in 300ms;
+}
+#about-us-page .open-faq .faq-question {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#about-us-page .open-faq .faq-answer {
+  grid-template-rows: 1fr;
+  padding: 24.5px 16px 24.5px 23px;
+}
+#about-us-page .open-faq .faq-question-icon {
+  rotate: -45deg;
+}
+@media only screen and (max-width: 690px) {
+  #about-us-page .video-container {
+    padding: 27.5px 20px;
+  }
+  #about-us-page .video-wrapper {
+    padding: 13px 15px 16px;
+  }
+  #about-us-page .ask-form-section {
+    padding: 88px 35px 104px;
+  }
+  #about-us-page .ask-form-section h2 {
+    font-size: 32px;
+    line-height: 30px;
+  }
+  #about-us-page .ask-form-section form {
+    width: 100%;
+  }
+  #about-us-page .ask-form-section form input {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  #about-us-page .ask-form-section form svg {
+    width: 20px;
+    height: 17.6px;
+  }
+  #about-us-page .faq-section {
+    padding: 35px 20px 29px;
+  }
+  #about-us-page .faq-container {
+    padding: 11px 25px 54px;
+  }
+  #about-us-page .faq-section-heading {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  #about-us-page .faq-scrollbar {
+    overflow-y: visible;
+    padding-right: 0px;
+    max-height: fit-content;
+  }
+  #about-us-page .faq-info-heading {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  #about-us-page .faq-question {
+    display: grid;
+    grid-template-columns: auto 19px;
+    align-items: center;
+  }
+  #about-us-page .faq-question-text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  #about-us-page .faq-question-icon {
+    width: 19px;
+    height: 19px;
+  }
+  #about-us-page .faq-info-description,
+  #about-us-page .answer-content {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  #about-us-page .video-container {
+    padding: 27.5px 10px;
+  }
+  #about-us-page .video-wrapper {
+    padding: 8px 10px 11px;
+  }
+  #about-us-page .ask-form-section {
+    padding: 88px 25px 104px;
+  }
+  #about-us-page .faq-section {
+    padding: 35px 10px 0px;
+  }
+  #about-us-page .faq-container {
+    padding: 11px 25px 54px;
+  }
+  #about-us-page .faq-question {
+    padding: 24.5px 11px 24.5px 18px;
+  }
+  #about-us-page .faq-answer {
+    padding: 0px 11px 0px 18px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #about-us-page .ask-form-section {
+    padding: 88px 20px 104px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

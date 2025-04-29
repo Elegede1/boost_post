@@ -346,26 +346,34 @@
           >
             <nav>
               <ul class="flex items-center gap-x-[53.7px]">
-                <li
-                  class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                >
-                  About us
-                </li>
-                <li
-                  class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                >
-                  Services
-                </li>
-                <li
-                  class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                >
-                  Community
-                </li>
-                <li
-                  class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                >
-                  Works
-                </li>
+                <a href="">
+                  <li
+                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                  >
+                    About us
+                  </li>
+                </a>
+                <a href="">
+                  <li
+                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                  >
+                    Services
+                  </li>
+                </a>
+                <a href="">
+                  <li
+                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                  >
+                    Community
+                  </li>
+                </a>
+                <a href="">
+                  <li
+                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                  >
+                    Works
+                  </li>
+                </a>
               </ul>
             </nav>
             <div>
@@ -375,6 +383,7 @@
                 viewBox="0 0 44 30"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="cursor-pointer"
               >
                 <g filter="url(#filter0_d_338_343)">
                   <path
@@ -469,11 +478,30 @@
                 </defs>
               </svg>
             </div>
-            <button
-              class="px-[35px] py-[20px] outline-[1px] outline-[#191A23] rounded-[14px]"
+            <!-- Book a Service Button - Comment out if not needed -->
+            <a href="">
+              <button
+                class="cursor-pointer px-[35px] py-[20px] outline-[1px] outline-[#191A23] rounded-[14px]"
+              >
+                Book a service
+              </button>
+            </a>
+
+            <!-- Login and Sign up Buttons - Comment out if not needed -->
+            <!-- <button
+              class="px-[23px] py-[20px] w-[210px] flex items-center justify-between outline-[1px] outline-[#191A23] rounded-[14px]"
             >
-              Book a service
+              <a href="">Log in</a> <span>|</span> <a href="">Sign up</a>
+            </button> -->
+
+            <!-- Log out Button - Comment out if not needed -->
+            <!-- <a href="">
+              <button
+              class="cursor-pointer px-[35px] py-[20px] w-[210px] flex items-center justify-center outline-[1px] outline-[#191A23] rounded-[14px]"
+            >
+              Log out
             </button>
+            </a> -->
           </div>
           <div class="mobile-nav-icon hidden">
             <div
@@ -515,10 +543,15 @@
             </div>
             <nav>
               <ul class="flex flex-col gap-y-[33px]">
-                <li>About us</li>
-                <li>Services</li>
-                <li>Community</li>
-                <li>Works</li>
+                <!-- Comment link out if not needed -->
+                <a href=""><li>About us</li></a>
+                <a href=""><li>Services</li></a>
+                <a href=""><li>Community</li></a>
+                <a href=""><li>Works</li></a>
+                <a href=""><li>Book a service</li></a>
+                <!-- <a href=""><li>Login</li></a>
+                <a href=""><li>Sign up</li></a>
+                <a href=""><li>Log out</li></a> -->
               </ul>
             </nav>
           </div>
@@ -569,12 +602,12 @@
         <div
           class="services-list flex items-center justify-between text-[20px]/[28px] font-snippet"
         >
-          <span>Content Marketing</span>
-          <span>Graphic Design</span>
-          <span>Video Editing</span>
-          <span>Cloud Hosting</span>
-          <span>Market Research</span>
-          <span>Virtual Assistance</span>
+          <a href=""><span>Content Marketing</span></a>
+          <a href=""><span>Graphic Design</span></a>
+          <a href=""><span>Video Editing</span></a>
+          <a href=""><span>Cloud Hosting</span></a>
+          <a href=""><span>Market Research</span></a>
+          <a href=""><span>Virtual Assistance</span></a>
         </div>
       </div>
     </footer>
