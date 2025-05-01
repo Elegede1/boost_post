@@ -14,5 +14,6 @@
 @use "./layout/grid" as grid;
 @use "./layout/form" as form;
 
-@use "./pages/home";
-@use "./pages/about-us";
+@use "./pages/home" as home;
+@use "./pages/about-us" as about;
+@use "pages/payment" as payment;
