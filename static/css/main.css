@@ -527,4 +527,17 @@
   color: #0a0d13;
 }
 
+#community-page .active-menu-item, #community-page .menu-item:hover {
+  background-color: rgba(201, 255, 137, 0.1803921569);
+}
+#community-page .active-menu-item path, #community-page .menu-item:hover path {
+  stroke: #8ACA1C;
+}
+#community-page .active-menu-item span, #community-page .menu-item:hover span {
+  color: #8ACA1C;
+}
+#community-page .active-tab-button, #community-page .tab-button:hover {
+  background-color: #8ACA1C;
+}
+
 /*# sourceMappingURL=main.css.map */

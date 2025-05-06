@@ -12,6 +12,10 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
 @font-face {
   font-family: "Telegraf";
   font-weight: 200;
