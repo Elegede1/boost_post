@@ -24,7 +24,7 @@
             id="header-white-container"
             class="header-inner flex items-center justify-between pl-[36px] pr-[66px] transition-[padding-block] ease-in duration-[300ms] py-[24px]"
           >
-            <a href="{% url 'index' %}" class="h-full overflow-hidden">
+            <a href="{{ url_for('index') }}" class="h-full overflow-hidden">
               <div class="logo flex items-center justify-center h-[62px]">
                 <div
                   class="logo-wrapper h-[121px] overflow-hidden flex justify-center"
@@ -346,26 +346,34 @@
             >
               <nav>
                 <ul class="flex items-center gap-x-[53.7px]">
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    About us
-                  </li>
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    Services
-                  </li>
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    Community
-                  </li>
-                  <li
-                    class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
-                  >
-                    Works
-                  </li>
+                  <a href="#">
+                    <li
+                      class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                    >
+                      About us
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li
+                      class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                    >
+                      Services
+                    </li>
+                  </a>
+                  <a href="{{ url_for('community') }}">
+                    <li
+                      class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                    >
+                      Community
+                    </li>
+                  </a>
+                  <a href="#">
+                    <li
+                      class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
+                    >
+                      Works
+                    </li>
+                  </a>
                 </ul>
               </nav>
               <div>
@@ -469,11 +477,11 @@
                   </defs>
                 </svg>
               </div>
-              <button
-                class="px-[35px] py-[20px] outline-[1px] outline-[#191A23] rounded-[14px]"
+              <a
+                class="px-[35px] py-[20px] outline-[1px] outline-[#191A23] rounded-[14px]" href="{{ url_for('signup') }}"
               >
                 Book a service
-              </button>
+              </a>
             </div>
             <div class="mobile-nav-icon hidden">
               <div
@@ -515,10 +523,15 @@
               </div>
               <nav>
                 <ul class="flex flex-col gap-y-[33px]">
-                  <li>About us</li>
-                  <li>Services</li>
-                  <li>Community</li>
-                  <li>Works</li>
+                <!-- Comment link out if not needed -->
+                <a href=""><li>About us</li></a>
+                <a href=""><li>Services</li></a>
+                <a href="{{ url_for('community') }}"><li>Community</li></a>
+                <a href=""><li>Works</li></a>
+                <!-- <a href=""><li>Book a service</li></a> -->
+                <a href=""><li>Login</li></a>
+                <a href=""><li>Sign up</li></a>
+                <!-- <a href=""><li>Log out</li></a> -->
                 </ul>
               </nav>
             </div>

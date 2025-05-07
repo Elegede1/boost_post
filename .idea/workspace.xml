@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95c2dda5-2dae-47ad-bb91-8067b80a89bf" name="Changes" comment="adding gitignore" />
+    <list default="true" id="95c2dda5-2dae-47ad-bb91-8067b80a89bf" name="Changes" comment="adding gitignore">
+      <change afterPath="$PROJECT_DIR$/templates/community.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/boost_post.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boost_post.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boost_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/boost_post.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,9 +56,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
     "com.codeium.enabled": "true",
-    "com.google.cloudcode.ide_session_index": "20250426_0002",
+    "com.google.cloudcode.ide_session_index": "20250507_0003",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Jekuthiel/Documents/Personal Projects/boost_post",
+    "last_opened_file_path": "C:/Users/Jekuthiel/Documents/100_days_of_python/flask authentification",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, abort
 import datetime
-from flask_bootstrap import Bootstrap5
+# from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm, CSRFProtect
 from flask_ckeditor import CKEditor
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
@@ -17,7 +17,7 @@ load_dotenv()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 socketio = SocketIO(app)
-Bootstrap5(app)
+# Bootstrap5(app)
 
 
 
@@ -53,7 +53,7 @@ def aboutus():
 def login():
     return render_template("login.html", community=community, aboutus=aboutus, signup=signup, login=login)
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
     return render_template("signup.html", community=community, aboutus=aboutus, signup=signup, login=login)
 
