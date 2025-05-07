@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c2dda5-2dae-47ad-bb91-8067b80a89bf" name="Changes" comment="adding gitignore">
-      <change afterPath="$PROJECT_DIR$/templates/community.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/boost_post.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/boost_post.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boost_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/boost_post.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/background -2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/boostpostlogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/homepageimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/img/profile-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/styles/aboutus.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/styles/community.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/styles/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset/styles/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/aboutus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/community.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signin.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
