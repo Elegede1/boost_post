@@ -112,3 +112,41 @@ if (document.getElementById("about-us-page")) {
 END ABOUT US PAGE
 
 */
+
+/*
+
+BEGIN COMMUNITY PAGE
+
+*/
+
+if (document.getElementById("community-page")) {
+  function toggleSearchBar() {
+    searchBar = document.getElementById("community-toggle-search-bar");
+    if (
+      searchBar.className.includes(
+        "sm:p-[10.6px_29px_11.6px] p-[10.6px_29px_11.6px_18px]"
+      )
+    ) {
+      searchBar.className =
+        "absolute top-0 left-0 bg-white shadow-[4px_4px_4px_0px_rgba(0,0,0,0.2)] lg:hidden flex w-[0px] overflow-hidden";
+    } else {
+      searchBar.className =
+        "absolute top-0 left-0 bg-white sm:p-[10.6px_29px_11.6px] p-[10.6px_29px_11.6px_18px] transition-[width] ease-in duration-[300ms] shadow-[4px_4px_4px_0px_rgba(0,0,0,0.2)] lg:hidden flex w-full overflow-hidden";
+    }
+  }
+
+  const form = document.getElementById("desktop-search-form");
+  const input = document.getElementById("desktop-search-input");
+
+  form.addEventListener("click", () => {
+    if (document.activeElement !== input) {
+      input.focus();
+    }
+  });
+}
+
+/*
+
+END COMMUNITY PAGE
+
+*/

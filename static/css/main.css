@@ -131,14 +131,14 @@
   }
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1235px) {
   #fixed-header-spacing {
-    height: 139px;
+    height: 135px;
   }
 }
 @media only screen and (max-width: 690px) {
   #fixed-header-spacing {
-    height: 119px;
+    height: 117px;
   }
 }
 
@@ -538,6 +538,11 @@
 }
 #community-page .active-tab-button, #community-page .tab-button:hover {
   background-color: #8ACA1C;
+}
+@media only screen and (max-width: 1023.9px) {
+  #community-page .menu-item span {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -14,4 +14,12 @@
  .active-tab-button, .tab-button:hover {
     background-color: #8ACA1C;
  }
+
+ @media only screen and (max-width: 1023.9px) {
+    .menu-item {
+        span {
+            display: none;
+        }
+    }
+ }
 }
