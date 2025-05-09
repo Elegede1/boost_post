@@ -1,3 +1,51 @@
+.btn-submit-payment-- {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  border: 1px solid #000000;
+  width: 476;
+  height: 52;
+  border-radius: 15px;
+  border-width: 1px;
+  gap: 10px;
+  padding-top: 20px;
+  padding-right: 193px;
+  padding-bottom: 20px;
+  padding-left: 193px;
+  white-space: nowrap;
+  align-self: flex-end;
+  background-color: #b9ff66;
+  color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .btn-submit-payment-- {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.btn-buy-payment-- {
+  width: 527;
+  height: 37.5999984741;
+  border-radius: 6.2px;
+  background-color: #b9ff66;
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 12.4px;
+  line-height: 18.6px;
+  letter-spacing: 0%;
+  border: 1px solid #000000;
+  padding: 10px;
+  color: white;
+}
+@media only screen and (max-width: 1000px) {
+  .btn-buy-payment-- {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 1235px) {
   #layout-page-footer .services-container {
     padding: 0 47px;
@@ -83,14 +131,14 @@
   }
 }
 
-@media only screen and (max-width: 1160px) {
+@media only screen and (max-width: 1235px) {
   #fixed-header-spacing {
-    height: 139px;
+    height: 135px;
   }
 }
 @media only screen and (max-width: 690px) {
   #fixed-header-spacing {
-    height: 119px;
+    height: 117px;
   }
 }
 
@@ -138,6 +186,362 @@
 @media only screen and (max-width: 350px) {
   #home-page .layout-grid-container {
     padding: 30px 10px 0;
+  }
+}
+
+#about-us-page .faq-scrollbar {
+  scrollbar-color: black transparent;
+  scrollbar-width: thin;
+}
+#about-us-page .faq-question,
+#about-us-page .faq-answer,
+#about-us-page .faq-question-icon {
+  transition: all ease-in 300ms;
+}
+#about-us-page .open-faq .faq-question {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#about-us-page .open-faq .faq-answer {
+  grid-template-rows: 1fr;
+  padding: 24.5px 16px 24.5px 23px;
+}
+#about-us-page .open-faq .faq-question-icon {
+  rotate: -45deg;
+}
+@media only screen and (max-width: 690px) {
+  #about-us-page .video-container {
+    padding: 27.5px 20px;
+  }
+  #about-us-page .video-wrapper {
+    padding: 13px 15px 16px;
+  }
+  #about-us-page .ask-form-section {
+    padding: 88px 35px 104px;
+  }
+  #about-us-page .ask-form-section h2 {
+    font-size: 32px;
+    line-height: 30px;
+  }
+  #about-us-page .ask-form-section form {
+    width: 100%;
+  }
+  #about-us-page .ask-form-section form input {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  #about-us-page .ask-form-section form svg {
+    width: 20px;
+    height: 17.6px;
+  }
+  #about-us-page .faq-section {
+    padding: 35px 20px 29px;
+  }
+  #about-us-page .faq-container {
+    padding: 11px 25px 54px;
+  }
+  #about-us-page .faq-section-heading {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  #about-us-page .faq-scrollbar {
+    overflow-y: visible;
+    padding-right: 0px;
+    max-height: fit-content;
+  }
+  #about-us-page .faq-info-heading {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  #about-us-page .faq-question {
+    display: grid;
+    grid-template-columns: auto 19px;
+    align-items: center;
+  }
+  #about-us-page .faq-question-text {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  #about-us-page .faq-question-icon {
+    width: 19px;
+    height: 19px;
+  }
+  #about-us-page .faq-info-description,
+  #about-us-page .answer-content {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  #about-us-page .video-container {
+    padding: 27.5px 10px;
+  }
+  #about-us-page .video-wrapper {
+    padding: 8px 10px 11px;
+  }
+  #about-us-page .ask-form-section {
+    padding: 88px 25px 104px;
+  }
+  #about-us-page .faq-section {
+    padding: 35px 10px 0px;
+  }
+  #about-us-page .faq-container {
+    padding: 11px 25px 54px;
+  }
+  #about-us-page .faq-question {
+    padding: 24.5px 11px 24.5px 18px;
+  }
+  #about-us-page .faq-answer {
+    padding: 0px 11px 0px 18px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #about-us-page .ask-form-section {
+    padding: 88px 20px 104px;
+  }
+}
+
+.container-main-wrapper- {
+  width: 100vw;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+.container-payment {
+  width: 100%;
+  height: 670px;
+  top: 199px;
+  left: 69px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+}
+.container-payment .container-left-payment_details {
+  width: 572px;
+  height: 685px;
+  top: 195px;
+  border-radius: 8px;
+  padding: 38px 28px;
+  gap: 36px;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-left-payment_details {
+    width: 100%;
+  }
+}
+.container-payment .container-left-payment_details .container-header-payment {
+  width: 476px;
+  height: 56px;
+  gap: 8px;
+  border-bottom: 1px solid #acacac;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-left-payment_details .container-header-payment {
+    width: 100%;
+  }
+}
+.container-payment .container-left-payment_details .container-header-payment h1 {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #0a0d13;
+}
+.container-payment .container-left-payment_details .container-body-main-items {
+  margin-top: 50px;
+}
+.container-payment .container-left-payment_details .container-body-main-items p {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #0a0d13;
+}
+.container-payment .container-left-payment_details .container-body-main-items form {
+  width: 183px;
+  height: 22px;
+  gap: 19px;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-left-payment_details .container-body-main-items form {
+    width: 100%;
+  }
+}
+.container-payment .container-left-payment_details .container-body-main-items form .input-holder-- {
+  width: 77px;
+  height: 22px;
+  gap: 8px;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-left-payment_details .container-body-main-items form .input-holder-- {
+    width: 100%;
+    height: auto;
+  }
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details {
+  width: 476px;
+  height: 386px;
+  gap: 97px;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-left-payment_details .container-body-main-items form .container-account-details {
+    width: 100%;
+  }
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-main-items {
+  height: 148px;
+  gap: 10px;
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-main-items span {
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #acacac;
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-main-items p {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 12px;
+  letter-spacing: 0%;
+  color: #0a0d13;
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-main-items h6 {
+  font-family: Space Grotesk;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #0a0d13;
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-bottom-btn-submit {
+  width: 100%;
+  gap: 23px;
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-bottom-btn-submit .container-articles-txt {
+  width: 100%;
+}
+.container-payment .container-left-payment_details .container-body-main-items form .container-account-details .container-bottom-btn-submit .container-articles-txt p {
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0%;
+  color: #acacac;
+}
+.container-payment .container-right-currency {
+  width: 500px;
+  height: 495.9496154785px;
+  border-radius: 24.2px;
+  padding: 32px;
+  box-shadow: 12px 12px 36px 6px rgba(2, 2, 70, 0.1215686275);
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-right-currency {
+    width: 100%;
+  }
+}
+.container-payment .container-right-currency .container-items-checkout {
+  width: 534.7146606445;
+  height: 72.0102844238;
+  border-radius: 18.39px;
+  gap: 7px;
+  border-width: 0.38px;
+  border: 0.38px solid #b2bcca;
+  padding: 15px;
+}
+@media only screen and (max-width: 1000px) {
+  .container-payment .container-right-currency .container-items-checkout {
+    width: 100%;
+  }
+}
+.container-payment .container-right-currency .container-items-checkout h1 {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 13.79px;
+  line-height: 21.45px;
+  letter-spacing: 0%;
+  color: #0a0d13;
+}
+.container-payment .container-right-currency .container-items-checkout span {
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-size: 12.26px;
+  line-height: 18.39px;
+  letter-spacing: 0%;
+  color: #acacac;
+}
+.container-payment .container-right-currency .container-items-checkout p {
+  font-family: Space Grotesk;
+  font-weight: 400;
+  font-size: 12.26px;
+  line-height: 18.39px;
+  letter-spacing: 0%;
+  color: #0a0d13;
+}
+.container-payment .container-right-currency .container-items-checkout .header-container-total {
+  width: 510.2005004883;
+  height: 44.4318771362;
+  justify-content: space-between;
+  padding-right: 6.13px;
+  padding-left: 6.13px;
+  border-top: 0.77px solid #e0e0e0;
+  padding: 10px 0;
+}
+.container-payment .container-right-currency .container-items-checkout .header-container-total p {
+  font-family: Space Grotesk;
+  font-weight: 500;
+  font-size: 15.79px;
+  line-height: 21.45px;
+  letter-spacing: 0%;
+  color: #0a0d13;
+}
+.container-payment .container-right-currency .container-items-checkout .header-container-total span {
+  font-family: Space Grotesk;
+  font-weight: 600;
+  font-size: 15.79px;
+  line-height: 21.45px;
+  letter-spacing: 0%;
+  color: #0a0d13;
+}
+
+#community-page .active-menu-item, #community-page .menu-item:hover {
+  background-color: rgba(201, 255, 137, 0.1803921569);
+}
+#community-page .active-menu-item path, #community-page .menu-item:hover path {
+  stroke: #8ACA1C;
+}
+#community-page .active-menu-item span, #community-page .menu-item:hover span {
+  color: #8ACA1C;
+}
+#community-page .active-tab-button, #community-page .tab-button:hover {
+  background-color: #8ACA1C;
+}
+@media only screen and (max-width: 1023.9px) {
+  #community-page .menu-item span {
+    display: none;
   }
 }
 

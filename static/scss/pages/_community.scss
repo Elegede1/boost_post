@@ -1,0 +1,25 @@
+#community-page{
+ .active-menu-item, .menu-item:hover {
+    background-color: #C9FF892E;
+
+    path {
+        stroke: #8ACA1C;
+    }
+
+    span {
+        color: #8ACA1C;
+    }
+ }
+
+ .active-tab-button, .tab-button:hover {
+    background-color: #8ACA1C;
+ }
+
+ @media only screen and (max-width: 1023.9px) {
+    .menu-item {
+        span {
+            display: none;
+        }
+    }
+ }
+}

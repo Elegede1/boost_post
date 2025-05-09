@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}Community{% endblock %}
+
+{% block content %}
+
+    <!-- MAIN CONTENT -->
+    <div id="about-us-page" class="flex justify-center">
+      <div class="max-w-[1920px] w-full">
+        <div class="p-[27.5px_32.5px] video-container">
+          <div class="relative video-wrapper p-[17px_21px_20px] aspect-video">
+            <div
+              class="absolute top-0 left-0 blur-[9px] bg-[#B9FF66] w-full aspect-video rounded-[15px]"
+            ></div>
+            <video src="" class="w-full h-full rounded-[15px]" controls></video>
+          </div>
+        </div>
+        <div
+          class="bg-cover bg-no-repeat bg-center bg-[url(../images/O6o1.webp)]"
+        >
+          <div
+            class="ask-form-section bg-[rgba(0,0,0,0.5)] p-[88px_0_104px] flex flex-col items-center gap-y-[25px]"
+          >
+            <h2 class="text-[50px]/[47px] text-white text-center">
+              HOW CAN WE HELP?
+            </h2>
+
+            <form
+              action=""
+              class="w-[66.9%] bg-white rounded-[15px] flex items-center justify-between gap-x-[25px] p-[15px_28px_15px_26px] inset-shadow-[4px_0px_4px_0px_rgba(0,0,0,0.25)]"
+            >
+              <input
+                type="text"
+                class="text-[18px]/[25px] font-manrope w-full outline-0 placeholder-[rgba(0,0,0,0.5)]"
+                placeholder="Ask Us"
+              />
+              <button class="cursor-pointer">
+                <svg
+                  width="25"
+                  height="22"
+                  viewBox="0 0 25 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_334_323)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M2.48689 3.92946L3.71993 10.0258H11.328C11.9752 10.0258 12.4999 10.4769 12.4999 11.0334C12.4999 11.5899 11.9752 12.041 11.328 12.041H3.71993L2.48689 18.1373L21.7646 11.0334L2.48689 3.92946ZM1.5448 11.0334L0.0993774 3.88703C-0.0174735 3.30931 0.199936 2.71882 0.682168 2.30418C1.28808 1.78319 2.20185 1.63187 2.98946 1.92211L23.9307 9.63904C24.5793 9.87809 24.9999 10.4265 24.9999 11.0334C24.9999 11.6402 24.5793 12.1887 23.9307 12.4277L2.98946 20.1446C2.20185 20.4349 1.28808 20.2835 0.682168 19.7626C0.199936 19.3479 -0.0174738 18.7574 0.0993774 18.1797L1.5448 11.0334Z"
+                      fill="#8E8E93"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_334_323">
+                      <rect
+                        width="25"
+                        height="21.4961"
+                        fill="white"
+                        transform="translate(0 0.285156)"
+                      />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="p-[35px_32.5px_29px] faq-section">
+          <div
+            class="faq-container bg-[#B9FF66] rounded-[15px] p-[11px_15px_54px_41px] inset-shadow-[4px_0px_4px_0px_rgba(0,0,0,0.5)]"
+          >
+            <h2
+              class="faq-section-heading mb-[35px] text-[50px]/[54px] text-center"
+            >
+              FREQUENTLY ASKED QUESTIONS
+            </h2>
+            <div
+              class="pr-[28px] flex flex-col gap-[46px] max-h-[633px] overflow-y-auto faq-scrollbar"
+            >
+              <!-- Start of FAQ Type Section eg. General Information Section -->
+              <div>
+                <h4 class="faq-info-heading text-[25px]/[32px] font-bold">
+                  General Information Section
+                </h4>
+                <p
+                  class="faq-info-description text-[15px]/[19px] font-light mb-[20px]"
+                >
+                  This section provides a comprehensive overview of what Boost
+                  Promotions offers, who we serve, and how we tailor our
+                  services to meet diverse needs.
+                </p>
+                <div class="flex flex-col gap-y-[24px]">
+                  <!-- Start of Question and Answer Component -->
+                  <div class="bg-white rounded-[15px]">
+                    <div
+                      class="faq-question flex justify-between gap-x-[15px] bg-black p-[24.5px_16px_24.5px_23px] rounded-[15px] cursor-pointer"
+                      onclick="handleAccordion(event)"
+                    >
+                      <span
+                        class="faq-question-text text-[20px]/[26px] text-[#B9FF66]"
+                        >What services does Boost Promotions offer?</span
+                      >
+                      <svg
+                        class="faq-question-icon"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 20V12M12 12V4M12 12H20M12 12H4"
+                          stroke="#B9FF66"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="faq-answer grid grid-rows-[0fr] p-[0px_16px_0px_23px]"
+                    >
+                      <p
+                        class="answer-content text-[15px]/[19px] font-light overflow-y-hidden"
+                      >
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Ratione est sit nihil pariatur qui quasi quidem
+                        suscipit fugit eum laudantium!
+                      </p>
+                    </div>
+                  </div>
+                  <!-- End of Question and Answer Component -->
+                </div>
+              </div>
+              <!-- End of FAQ Type Section eg. General Information Section -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+{% endblock %}

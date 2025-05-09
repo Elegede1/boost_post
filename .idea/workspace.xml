@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95c2dda5-2dae-47ad-bb91-8067b80a89bf" name="Changes" comment="adding gitignore">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/img/background -2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/img/boostpostlogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/img/homepageimage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/img/profile-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/styles/aboutus.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/styles/community.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/styles/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/styles/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/aboutus.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/community.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boost_post.py" beforeDir="false" afterPath="$PROJECT_DIR$/omni_digitals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/output.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/static/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +46,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "Python.boost_post.executor": "Run",
+    "Python.omni_digitals.executor": "Run",
     "RunOnceActivity.ChatTagsLlmMigration": "true",
     "RunOnceActivity.CodyAccountHistoryMigration": "true",
     "RunOnceActivity.CodyAccountsIdsRefresh": "true",
@@ -62,9 +59,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
     "com.codeium.enabled": "true",
-    "com.google.cloudcode.ide_session_index": "20250507_0003",
+    "com.google.cloudcode.ide_session_index": "20250507_0005",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Jekuthiel/Documents/100_days_of_python/flask authentification",
+    "last_opened_file_path": "C:/Users/Jekuthiel/Documents/Personal Projects/omni_digitals",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>

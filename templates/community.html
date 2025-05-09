@@ -8,14 +8,14 @@
     <!-- MAIN CONTENT -->
     <div id="community-page" class="flex justify-center">
       <div class="max-w-[1920px] w-full">
-        <div class="grid grid-cols-[20.54%_59.98%_19.48%] bg-[#FAFAFA]">
+        <div class="grid lg:grid-cols-[20.54%_59.98%_19.48%] md:grid-cols-[10.54%_64.98%_24.48%] grid-cols-[10.54%_89.46%] bg-[#FAFAFA]">
           <div
-            class="flex flex-col gap-y-[30px] shadow-[4px_0px_4px_-4px_rgba(0,0,0,0.2)] min-h-screen bg-white"
+            class="flex flex-col gap-y-[30px] shadow-[4px_0px_4px_-4px_rgba(0,0,0,0.2)] md:row-[1/2] row-[1/3] min-h-screen bg-white"
           >
             <div
-              class="p-[11px_30px_12px_50px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.2)]"
+              class="xl:p-[11px_30px_12px_50px] lg:p-[11px_29px_12px_49px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.2)]"
             >
-              <form class="flex items-end gap-x-[12px] cursor-text">
+              <form class=" lg:flex hidden items-end lg:justify-start justify-center gap-x-[12px] cursor-text" id="desktop-search-form">
                 <svg
                   width="18"
                   height="18"
@@ -38,22 +38,51 @@
                     stroke-linejoin="round"
                   />
                 </svg>
+
+                
                 <input
                   class="text-[13px]/[17px] tracking-[0.65px] font-medium placeholder-black outline-0 w-full"
                   placeholder="Search"
+                  id="desktop-search-input"
                 />
               </form>
+              <div class="lg:hidden flex items-end lg:justify-start justify-center gap-x-[12px]">
+<!-- SVG click opens form with id: community-toggle-search-bar | Form located in second grid column -->
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  onclick="toggleSearchBar()"
+                >
+                  <path
+                    d="M8.25 14.25C11.5637 14.25 14.25 11.5637 14.25 8.25C14.25 4.93629 11.5637 2.25 8.25 2.25C4.93629 2.25 2.25 4.93629 2.25 8.25C2.25 11.5637 4.93629 14.25 8.25 14.25Z"
+                    stroke="#808080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15.7498 15.75L12.4873 12.4875"
+                    stroke="#808080"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
 
             <div class="flex flex-col gap-y-[10px]">
               <span
-                class="px-[50px_30px] text-[12px]/[14px] text-[#808080] tracking-[0.24px] font-medium"
+                class="px-[50px_30px] text-[12px]/[14px] text-[#808080] lg:block hidden tracking-[0.24px] font-medium"
                 >MENU</span
               >
               <div
-                class="p-[11px_30px_12px] active-menu-item menu-item cursor-pointer"
+                class="xl:p-[11px_30px_12px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] active-menu-item menu-item cursor-pointer"
               >
-                <div class="flex items-end gap-x-[12px]">
+                <div class="flex items-end lg:justify-start justify-center gap-x-[12px]">
                   <svg
                     width="19"
                     height="18"
@@ -110,8 +139,8 @@
                   >
                 </div>
               </div>
-              <div class="p-[11px_30px_12px] menu-item cursor-pointer">
-                <div class="flex items-end gap-x-[12px]">
+              <div class="xl:p-[11px_30px_12px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] menu-item cursor-pointer">
+                <div class="flex items-end lg:justify-start justify-center gap-x-[12px]">
                   <svg
                     width="19"
                     height="18"
@@ -140,8 +169,8 @@
                   >
                 </div>
               </div>
-              <div class="p-[11px_30px_12px] menu-item cursor-pointer">
-                <div class="flex items-end gap-x-[12px]">
+              <div class="xl:p-[11px_30px_12px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] menu-item cursor-pointer">
+                <div class="flex items-end lg:justify-start justify-center gap-x-[12px]">
                   <svg
                     width="19"
                     height="18"
@@ -185,11 +214,11 @@
             </div>
             <div class="flex flex-col gap-y-[10px]">
               <span
-                class="px-[50px_30px] text-[12px]/[14px] text-[#808080] tracking-[0.24px] font-medium"
+                class="xl:px-[50px_30px] px-[49px_29px] lg:block hidden text-[12px]/[14px] text-[#808080] tracking-[0.24px] font-medium"
                 >PERSONAL NAVIGATOR</span
               >
-              <div class="p-[11px_30px_12px] menu-item cursor-pointer">
-                <div class="flex items-end gap-x-[12px]">
+              <div class="xl:p-[11px_30px_12px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] menu-item cursor-pointer">
+                <div class="flex items-end lg:justify-start justify-center gap-x-[12px]">
                   <svg
                     width="19"
                     height="18"
@@ -225,8 +254,8 @@
                   >
                 </div>
               </div>
-              <div class="p-[11px_30px_12px] menu-item cursor-pointer">
-                <div class="flex items-end gap-x-[12px]">
+              <div class="xl:p-[11px_30px_12px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] menu-item cursor-pointer">
+                <div class="flex items-end lg:justify-start justify-center gap-x-[12px]">
                   <svg
                     width="19"
                     height="18"
@@ -248,8 +277,8 @@
                   >
                 </div>
               </div>
-              <div class="p-[11px_30px_12px] menu-item cursor-pointer">
-                <div class="flex items-end gap-x-[12px]">
+              <div class="xl:p-[11px_30px_12px] md:p-[11px_29px_12px] sm:p-[11px_20px_12px] p-[11px_5px_12px] menu-item cursor-pointer">
+                <div class="flex items-end lg:justify-start justify-center gap-x-[12px]">
                   <svg
                     width="19"
                     height="18"
@@ -285,10 +314,14 @@
               </div>
             </div>
           </div>
-          <div>
-            <div class="mx-[50px_16px]">
+          <div class="relative">
+            <!-- Form with id: community-toggle-search-bar  -->
+            <form class="absolute top-0 left-0 bg-white shadow-[4px_4px_4px_0px_rgba(0,0,0,0.2)] lg:hidden flex w-[0px] overflow-hidden" id="community-toggle-search-bar">
+              <input type="text" placeholder="Search" class="text-[13px]/[18px] tracking-[0.65px] font-medium placeholder-black outline-0 w-full border-b-[1px] border-[rgba(0,0,0,0.2)]">
+            </form>
+            <div class="md:mx-[50px_16px] sm:mx-[33px] mx-[18px_20px]">
               <div
-                class="px-[5px] flex gap-x-[10px] py-[12px_13px] font-roboto"
+                class="px-[5px] flex gap-[10px] py-[12px_13px] font-roboto sm:flex-nowrap flex-wrap"
               >
                 <div
                   class="p-[5px_10px] bg-[#C9FF892E] active-tab-button tab-button rounded-[100px] flex items-center gap-x-[5px] cursor-pointer"
@@ -415,7 +448,7 @@
               </div>
               <form
                 action=""
-                class="p-[31px_45px_15px_40px] bg-white mt-[7px] shadow-[2px_1px_5px_0px_rgba(0,0,0,0.15)] flex flex-col gap-y-[11px]"
+                class="sm:p-[31px_45px_15px_40px] p-[31px_30px_15px] bg-white mt-[7px] shadow-[2px_1px_5px_0px_rgba(0,0,0,0.15)] flex flex-col gap-y-[11px]"
               >
                 <div class="flex gap-x-[10px]">
                   <div
@@ -439,7 +472,7 @@
                   <!-- Added categories -->
                   <!-- <span class="bg-[#8ACA1C] p-[4px_8px] rounded-[15px] flex items-end gap-x-[4px] cursor-pointer">name of category <span class="text-[10px]/[13px]">x</span></span> -->
                 </div>
-                <div class="flex justify-between">
+                <div class="flex sm:flex-row flex-col justify-between gap-[12px]">
                   <div class="mt-[2px] flex items-center gap-x-[12px]">
                     <svg
                       class="cursor-pointer"
@@ -518,11 +551,11 @@
                       />
                     </svg>
                   </div>
-                  <div class="flex gap-x-[11px]">
+                  <div class="flex gap-[11px] sm:flex-nowrap flex-wrap">
                     <div
-                      class="flex items-center gap-x-[8px] p-[3px_10px_3px_22px] cursor-pointer outline-[1px] outline-[#8ACA1C] rounded-[15px]"
+                      class="flex items-center gap-x-[8px] lg:p-[3px_10px_3px_22px] p-[3px_3px_3px_15px] cursor-pointer outline-[1px] outline-[#8ACA1C] rounded-[15px] sm:w-auto w-[105px]"
                     >
-                      <span class="text-[12px]/[15px] tracking-[0.24px]"
+                      <span class="lg:text-[12px]/[15px] text-[10px]/[15px] tracking-[0.24px]"
                         >Categories</span
                       >
                       <svg
@@ -541,7 +574,7 @@
                       </svg>
                     </div>
                     <button
-                      class="text-[12px]/[14px] tracking-[0.24px] bg-[#8ACA1C] text-white rounded-[15px] p-[8px_20px] flex items-center justify-between w-[108px] font-extrabold cursor-pointer"
+                      class="lg:text-[12px]/[14px] text-[10px]/[14px] tracking-[0.24px] bg-[#8ACA1C] text-white rounded-[15px] lg:p-[8px_20px] p-[8px_15px] flex items-center sm:justify-between gap-x-[8px] lg:w-[108px] sm:w-auto w-[105px] font-extrabold cursor-pointer"
                     >
                       <svg
                         width="13"
@@ -627,9 +660,9 @@
                       Consequat aliquet maecenas ut sit nulla
                     </p>
                   </div>
-                  <div class="flex items-center justify-between">
+                  <div class="flex sm:items-center sm:flex-row flex-col justify-between gap-[12px]">
                     <div
-                      class="flex items-center gap-x-[10px] text-[10px]/[12px] tracking-[0.5px] text-[#8ACA1C]"
+                      class="flex items-center gap-x-[10px] text-[10px]/[12px] tracking-[0.5px] text-[#8ACA1C] sm:ml-[0px] ml-[-8px]"
                     >
                       <span class="p-[5px_10px]">golang</span>
                       <span class="p-[5px_10px]">linux</span>
@@ -766,283 +799,9 @@
                       Consequat aliquet maecenas ut sit nulla
                     </p>
                   </div>
-                  <div class="flex items-center justify-between">
+                  <div class="flex sm:items-center sm:flex-row flex-col justify-between gap-[12px]">
                     <div
-                      class="flex items-center gap-x-[10px] text-[10px]/[12px] tracking-[0.5px] text-[#8ACA1C]"
-                    >
-                      <span class="p-[5px_10px]">golang</span>
-                      <span class="p-[5px_10px]">linux</span>
-                      <span class="p-[5px_10px]">golang</span>
-                    </div>
-                    <div
-                      class="text-[13px]/[17px] tracking-[0.39px] text-[#8ACA1C] flex items-center gap-x-[15px]"
-                    >
-                      <div class="flex items-center gap-x-[3px]">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.625 7.5C0.625 7.5 3.125 2.5 7.5 2.5C11.875 2.5 14.375 7.5 14.375 7.5C14.375 7.5 11.875 12.5 7.5 12.5C3.125 12.5 0.625 7.5 0.625 7.5Z"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M7.5 9.375C8.53553 9.375 9.375 8.53553 9.375 7.5C9.375 6.46447 8.53553 5.625 7.5 5.625C6.46447 5.625 5.625 6.46447 5.625 7.5C5.625 8.53553 6.46447 9.375 7.5 9.375Z"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-
-                        <span>125</span>
-                      </div>
-                      <div class="flex items-center gap-x-[3px]">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M13.125 9.375C13.125 9.70652 12.9933 10.0245 12.7589 10.2589C12.5245 10.4933 12.2065 10.625 11.875 10.625H4.375L1.875 13.125V3.125C1.875 2.79348 2.0067 2.47554 2.24112 2.24112C2.47554 2.0067 2.79348 1.875 3.125 1.875H11.875C12.2065 1.875 12.5245 2.0067 12.7589 2.24112C12.9933 2.47554 13.125 2.79348 13.125 3.125V9.375Z"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-
-                        <span>15</span>
-                      </div>
-                      <div class="flex items-center gap-x-[3px]">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7.5 11.875V3.125"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.125 7.5L7.5 3.125L11.875 7.5"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-
-                        <span>155</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="p-[25px_30px] bg-white shadow-[2px_1px_5px_0px_rgba(0,0,0,0.15)] flex flex-col gap-y-[15px] rounded-[5px]"
-                >
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-x-[15px]">
-                      <div
-                        class="w-[40px] h-[40px] bg-[url(/static/images/Ava.png)] bg-cover bg-no-repeat bg-center rounded-[50%]"
-                      ></div>
-                      <div class="flex flex-col gap-y-[4px]">
-                        <span class="text-[13px]/[17px] tracking-[0.65px]"
-                          >Golanginya</span
-                        >
-                        <span
-                          class="text-[10px]/[13px] tracking-[0.5px] text-[#8ACA1C]"
-                          >5 min ago</span
-                        >
-                      </div>
-                    </div>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
-                        stroke="#8ACA1C"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
-                        stroke="#8ACA1C"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
-                        stroke="#8ACA1C"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="flex flex-col gap-y-[10px]">
-                    <h5 class="text-[14px]/[18px] tracking-[0.7px] font-bold">
-                      How to patch KDE on FreeBSD?
-                    </h5>
-                    <p class="text-[14px]/[25px] tracking-[0.7px] font-light">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Consequat aliquet maecenas ut sit nulla
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div
-                      class="flex items-center gap-x-[10px] text-[10px]/[12px] tracking-[0.5px] text-[#8ACA1C]"
-                    >
-                      <span class="p-[5px_10px]">golang</span>
-                      <span class="p-[5px_10px]">linux</span>
-                      <span class="p-[5px_10px]">golang</span>
-                    </div>
-                    <div
-                      class="text-[13px]/[17px] tracking-[0.39px] text-[#8ACA1C] flex items-center gap-x-[15px]"
-                    >
-                      <div class="flex items-center gap-x-[3px]">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M0.625 7.5C0.625 7.5 3.125 2.5 7.5 2.5C11.875 2.5 14.375 7.5 14.375 7.5C14.375 7.5 11.875 12.5 7.5 12.5C3.125 12.5 0.625 7.5 0.625 7.5Z"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M7.5 9.375C8.53553 9.375 9.375 8.53553 9.375 7.5C9.375 6.46447 8.53553 5.625 7.5 5.625C6.46447 5.625 5.625 6.46447 5.625 7.5C5.625 8.53553 6.46447 9.375 7.5 9.375Z"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-
-                        <span>125</span>
-                      </div>
-                      <div class="flex items-center gap-x-[3px]">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M13.125 9.375C13.125 9.70652 12.9933 10.0245 12.7589 10.2589C12.5245 10.4933 12.2065 10.625 11.875 10.625H4.375L1.875 13.125V3.125C1.875 2.79348 2.0067 2.47554 2.24112 2.24112C2.47554 2.0067 2.79348 1.875 3.125 1.875H11.875C12.2065 1.875 12.5245 2.0067 12.7589 2.24112C12.9933 2.47554 13.125 2.79348 13.125 3.125V9.375Z"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-
-                        <span>15</span>
-                      </div>
-                      <div class="flex items-center gap-x-[3px]">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7.5 11.875V3.125"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M3.125 7.5L7.5 3.125L11.875 7.5"
-                            stroke="#8ACA1C"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-
-                        <span>155</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="p-[25px_30px] bg-white shadow-[2px_1px_5px_0px_rgba(0,0,0,0.15)] flex flex-col gap-y-[15px] rounded-[5px]"
-                >
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-x-[15px]">
-                      <div
-                        class="w-[40px] h-[40px] bg-[url(/static/images/Ava.png)] bg-cover bg-no-repeat bg-center rounded-[50%]"
-                      ></div>
-                      <div class="flex flex-col gap-y-[4px]">
-                        <span class="text-[13px]/[17px] tracking-[0.65px]"
-                          >Golanginya</span
-                        >
-                        <span
-                          class="text-[10px]/[13px] tracking-[0.5px] text-[#8ACA1C]"
-                          >5 min ago</span
-                        >
-                      </div>
-                    </div>
-                    <svg
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
-                        stroke="#8ACA1C"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6Z"
-                        stroke="#8ACA1C"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M12 20C12.5523 20 13 19.5523 13 19C13 18.4477 12.5523 18 12 18C11.4477 18 11 18.4477 11 19C11 19.5523 11.4477 20 12 20Z"
-                        stroke="#8ACA1C"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </div>
-                  <div class="flex flex-col gap-y-[10px]">
-                    <h5 class="text-[14px]/[18px] tracking-[0.7px] font-bold">
-                      How to patch KDE on FreeBSD?
-                    </h5>
-                    <p class="text-[14px]/[25px] tracking-[0.7px] font-light">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Consequat aliquet maecenas ut sit nulla
-                    </p>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div
-                      class="flex items-center gap-x-[10px] text-[10px]/[12px] tracking-[0.5px] text-[#8ACA1C]"
+                      class="flex items-center gap-x-[10px] text-[10px]/[12px] tracking-[0.5px] text-[#8ACA1C] sm:ml-[0px] ml-[-8px]"
                     >
                       <span class="p-[5px_10px]">golang</span>
                       <span class="p-[5px_10px]">linux</span>
@@ -1126,7 +885,7 @@
           </div>
           <div>
             <div
-              class="flex flex-col gap-y-[40px] m-[108px_11px_0px_0px] bg-white p-[30px_8px] rounded-[5px] outline-[1px] outline-[#EAEAEA] shadow-[0px_0px_5px_0px_rgba(0,0,0,0.05)]"
+              class="flex flex-col gap-y-[40px] md:m-[108px_11px_0px_0px] sm:m-[0px_33px_25px] m-[0px_20px_25px] bg-white p-[30px_8px] rounded-[5px] outline-[1px] outline-[#EAEAEA] shadow-[0px_0px_5px_0px_rgba(0,0,0,0.05)]"
             >
               <div class="flex flex-col gap-y-[10px]">
                 <div
