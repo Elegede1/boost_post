@@ -360,7 +360,7 @@
                     Services
                   </li>
                 </a>
-                <a href="{{ url_for('aboutus') }}">
+                <a href="{{ url_for('community') }}">
                   <li
                     class="p-[4px_11px] rounded-[15px] hover:outline-[1px] hover:outline-black"
                   >
@@ -491,8 +491,15 @@
             <button
               class="px-[23px] py-[20px] w-[210px] flex items-center justify-between outline-[1px] outline-[#191A23] rounded-[14px]"
             >
+            {% if current_user.is_authenticated %}
+              <!-- Show logout button when user is logged in -->
+               <span></span>
+              <a href="{{ url_for('logout') }}" class="btn btn-primary">Logout</a>
+              <span></span>
+            {% else %}
               <a href="{{ url_for('login') }}">Log in</a> <span>|</span> <a href="{{ url_for('signup') }}">Sign up</a>
             </button>
+            {% endif %}
 
             <!-- Log out Button - Comment out if not needed -->
             <!-- <a href="">

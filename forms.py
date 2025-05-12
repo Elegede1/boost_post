@@ -17,10 +17,31 @@ class RegistrationForm(FlaskForm):
                                      validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Sign Up')
 
-    def validate_username(self, username):
-        if username.data == 'admin':
-            raise ValidationError('Username cannot be "admin". Please choose a different one.')
+    # def validate_username(self, username):
+    #     if username.data == 'admin':
+    #         raise ValidationError('Username cannot be "admin". Please choose a different one.')
 
-    def validate_email(self, email):
-        if email.data == 'admin@example.com':
-            raise ValidationError('Email cannot be "admin@example.com". Please choose a different one.')
+    # def validate_email(self, email):
+    #     if email.data == 'admin@example.com':
+    #         raise ValidationError('Email cannot be "admin@example.com". Please choose a different one.')
+
+
+class LoginForm(FlaskForm):
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    password = PasswordField('Password',
+                             validators=[DataRequired(), Length(min=6)])
+    remember_me = BooleanField('Remember Me')
+    submit = SubmitField('Login')
+
+
+class ContactForm(FlaskForm):
+    name = StringField('Name',
+                       validators=[DataRequired(), Length(min=2, max=20)])
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    subject = StringField('Subject',
+                          validators=[DataRequired(), Length(min=2, max=20)])
+    message = CKEditorField('Message', validators=[DataRequired()])
+    submit = SubmitField('Send')
+

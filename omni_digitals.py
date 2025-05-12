@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, abort
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory, abort, session
 import datetime
 from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm, CSRFProtect
@@ -15,6 +15,18 @@ from flask_dance.consumer.storage.sqla import SQLAlchemyStorage
 from flask_dance.consumer import oauth_authorized
 from sqlalchemy.orm.exc import NoResultFound
 import json
+from forms import RegistrationForm, LoginForm, ContactForm
+from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy import Integer, String, Text
+from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
+import os
+import secrets
+import string
+
+
+
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'  # Allow HTTP for testing purposes
 
 
 load_dotenv()
@@ -23,10 +35,70 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 # socketio = SocketIO(app)
 # Bootstrap5(app)
+app.config["GOOGLE_CLIENT_ID"] = os.getenv("GOOGLE_CLIENT_ID")
+app.config["GOOGLE_CLIENT_SECRET"] = os.getenv("GOOGLE_CLIENT_SECRET")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
 
 
+# Configure Google OAuth
+blueprint = make_google_blueprint(
+    client_id=app.config["GOOGLE_CLIENT_ID"],
+    client_secret=app.config["GOOGLE_CLIENT_SECRET"],
+    scope=[
+        "https://www.googleapis.com/auth/userinfo.profile",
+        "https://www.googleapis.com/auth/userinfo.email",
+        "openid"
+    ],
+    redirect_to="google_login_callback",
+)
+app.register_blueprint(blueprint, url_prefix="/login")
 
-# db = pass
+
+# Initialize Flask-Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'
+
+@login_manager.user_loader
+def load_user(user_id):
+    # Since the user_id is just the primary key of our user table, use it in the query for the user
+    return db.session.get(User, int(user_id))
+
+class Base(DeclarativeBase):
+    pass
+
+
+db = SQLAlchemy(model_class=Base)
+db.init_app(app)
+
+
+class User(UserMixin, db.Model):
+    __tablename__ = 'users'
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    email: Mapped[str] = mapped_column(String(150), unique=True, nullable=False)
+    password: Mapped[str] = mapped_column(String(150), nullable=False)
+    name: Mapped[str] = mapped_column(String(150), nullable=False)
+    profile_pic: Mapped[str] = mapped_column(String(200))
+    is_google_user: Mapped[bool] = mapped_column(Integer, default=0)
+    messages: Mapped[list] = relationship("Message", back_populates="user")
+    def __repr__(self): # used for debugging
+        return f'<User {self.name}>'
+    
+
+class Message(db.Model):
+    __tablename__ = 'messages'
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    user_id: Mapped[int] = mapped_column(Integer, db.ForeignKey('users.id'))
+    content: Mapped[str] = mapped_column(Text, nullable=False)
+    timestamp: Mapped[datetime.datetime] = mapped_column(db.DateTime, default=datetime.datetime.utcnow)
+    user: Mapped[User] = relationship("User", back_populates="messages")
+    def __repr__(self): # used for debugging
+        return f'<Message {self.content}>'
+    
+# Initialize Flask-WTF CSRF protection
+csrf = CSRFProtect(app)
+
+
 
 # Example function to save a message to Firestore
 
@@ -75,7 +147,7 @@ def login():
 def google_login():
     if not google.authorized:
         return redirect(url_for("google.login"))
-    return redirect(url_for("google_login_callback"))
+    return redirect(url_for("google_login"))
 
 @app.route('/login/google/callback')
 def google_login_callback():
@@ -83,27 +155,31 @@ def google_login_callback():
         flash("Authentication failed.")
         return redirect(url_for("login"))
     
-    resp = google.get("/oauth2/v1/userinfo")
+    resp = google.get("/oauth2/v1/userinfo") # Get user info from Google
     if resp.ok:
         google_info = resp.json()
         email = google_info["email"]
         
         # Check if user exists in your database
-        # user = User.query.filter_by(email=email).first()
+        user = User.query.filter_by(email=email).first()
         
         # If user doesn't exist, create a new one
-        # if not user:
-        #     user = User(
-        #         email=email,
-        #         name=google_info.get("name", ""),
-        #         profile_pic=google_info.get("picture", ""),
-        #         is_google_user=True
-        #     )
-        #     db.session.add(user)
-        #     db.session.commit()
-        
+        if not user:
+                        # Generate a random password for Google users
+            random_password = ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(20))
+            hashed_password = generate_password_hash(random_password)
+            user = User(
+                email=email,
+                name=google_info.get("name", ""),
+                profile_pic=google_info.get("picture", ""),
+                is_google_user=True,
+                password=hashed_password # Store the generated password
+            )
+            db.session.add(user)
+            db.session.commit()
+            
         # Log in the user
-        # login_user(user)
+        login_user(user)
         flash("Successfully logged in with Google!")
         return redirect(url_for("index"))
     
@@ -119,29 +195,29 @@ def signup():
         password = request.form.get('password')
         
         # Check if user already exists
-        # existing_user = User.query.filter_by(email=email).first()
-        # if existing_user:
-        #     flash('Email already registered')
-        #     return redirect(url_for('signup'))
+        existing_user = User.query.filter_by(email=email).first()
+        if existing_user:
+            flash('Email already registered')
+            return redirect(url_for('index'))
         
         # Create new user
-        # hashed_password = generate_password_hash(password)
-        # new_user = User(name=name, email=email, password=hashed_password)
-        # db.session.add(new_user)
-        # db.session.commit()
+        hashed_password = generate_password_hash(password)
+        new_user = User(name=name, email=email, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
         
         # Log in the new user
-        # login_user(new_user)
-        # return redirect(url_for('index'))
+        login_user(new_user)
+        return redirect(url_for('index'))
     
-    return render_template("signup.html", community=community, aboutus=aboutus, signup=signup, login=login)
+    return render_template("signup.html", signup=signup, login=login)
 
 @app.route('/logout')
 @login_required
 def logout():
     logout_user()
     # Clear the Google OAuth token
-    session.clear()
+    session.clear() # This will clear the session and log out the user
     flash('You have been logged out')
     return redirect(url_for('index'))
 
@@ -181,4 +257,8 @@ def contact():
 
 if __name__ == '__main__':
     # socketio.run(app, debug=True, allow_unsafe_werkzeug=True)
+    with app.app_context():
+        db.create_all()  # Uncomment if you want to create tables
+        pass
+
     app.run(debug=True)

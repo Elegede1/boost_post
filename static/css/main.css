@@ -545,4 +545,35 @@
   }
 }
 
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  background-color: #fff;
+  color: #757575;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.google-login-btn:hover {
+  background-color: #f8f8f8;
+}
+  
+.google-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #4285F4;
+}
+
 /*# sourceMappingURL=main.css.map */
