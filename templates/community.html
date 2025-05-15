@@ -451,9 +451,11 @@
                 class="sm:p-[31px_45px_15px_40px] p-[31px_30px_15px] bg-white mt-[7px] shadow-[2px_1px_5px_0px_rgba(0,0,0,0.15)] flex flex-col gap-y-[11px]"
               >
                 <div class="flex gap-x-[10px]">
-                  <div
-                    class="w-[35px] h-[35px] bg-[url(/static/images/Rectangle1.png)] bg-cover bg-no-repeat bg-center rounded-[50%]"
-                  ></div>
+                    {% if current_user.is_authenticated %}
+                        <div class="w-[35px] bg-cover bg-no-repeat bg-center rounded-[50%]">
+                            <img src="{{ user.profile_pic }}" alt="{{ user.name }}'s profile picture" class="profile-image">
+                        </div>
+                    {% endif %}
                   <input
                     required
                     type="text"
@@ -573,7 +575,9 @@
                         />
                       </svg>
                     </div>
-                    <button
+                    
+                    <a
+                      href="{{ url_for('community') }}"
                       class="lg:text-[12px]/[14px] text-[10px]/[14px] tracking-[0.24px] bg-[#8ACA1C] text-white rounded-[15px] lg:p-[8px_20px] p-[8px_15px] flex items-center sm:justify-between gap-x-[8px] lg:w-[108px] sm:w-auto w-[105px] font-extrabold cursor-pointer"
                     >
                       <svg
@@ -598,7 +602,7 @@
                       </svg>
 
                       Publish
-                    </button>
+                    </a>
                   </div>
                 </div>
               </form>

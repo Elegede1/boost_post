@@ -15,7 +15,7 @@ from flask_dance.consumer.storage.sqla import SQLAlchemyStorage
 from flask_dance.consumer import oauth_authorized
 from sqlalchemy.orm.exc import NoResultFound
 import json
-from forms import RegistrationForm, LoginForm, ContactForm
+from forms import RegistrationForm, LoginForm, ContactForm, CommunityUploadForm
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import Integer, String, Text
@@ -34,7 +34,7 @@ load_dotenv()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
 # socketio = SocketIO(app)
-# Bootstrap5(app)
+Bootstrap5(app)
 app.config["GOOGLE_CLIENT_ID"] = os.getenv("GOOGLE_CLIENT_ID")
 app.config["GOOGLE_CLIENT_SECRET"] = os.getenv("GOOGLE_CLIENT_SECRET")
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URL")
@@ -59,7 +59,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
-@login_manager.user_loader
+@login_manager.user_loader # decorator to load the current user and grab their id
 def load_user(user_id):
     # Since the user_id is just the primary key of our user table, use it in the query for the user
     return db.session.get(User, int(user_id))
@@ -120,7 +120,11 @@ def index():
 
 @app.route('/community')
 def community():
-    return render_template("community.html", community=community, aboutus=aboutus, signup=signup, login=login)
+    # if user is authenticated, show the user profile picture by the 'Qeustion' input
+    if current_user.is_authenticated:
+        return render_template("community.html", community=community, aboutus=aboutus, signup=signup, login=login, user=current_user)
+    else:
+        return render_template("community.html", community=community, aboutus=aboutus, signup=signup, login=login)
 
 @app.route('/aboutus')
 def aboutus():
@@ -128,6 +132,11 @@ def aboutus():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        flash("You are already logged in.")
+        return redirect(url_for('index'))
+    
+
     if request.method == 'POST':
         # Handle regular login
         email = request.form.get('email')
@@ -139,9 +148,9 @@ def login():
         #     login_user(user)
         #     return redirect(url_for('index'))
         # else:
-        #     flash('Invalid email or password')
+        #     flash('Invalid email or psassword')
     
-    return render_template("login.html", community=community, aboutus=aboutus, signup=signup, login=login)
+    return render_template("login.html", login=login)
 
 @app.route('/login/google')
 def google_login():
@@ -188,6 +197,7 @@ def google_login_callback():
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    registration_form = RegistrationForm
     if request.method == 'POST':
         # Handle regular signup
         name = request.form.get('name')
@@ -210,7 +220,7 @@ def signup():
         login_user(new_user)
         return redirect(url_for('index'))
     
-    return render_template("signup.html", signup=signup, login=login)
+    return render_template("signup.html", form=registration_form, signup=signup, login=login)
 
 @app.route('/logout')
 @login_required

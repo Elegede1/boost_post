@@ -556,8 +556,12 @@
                 <a href="{{ url_for('community') }}"><li>Community</li></a>
                 <a href=""><li>Works</li></a>
                 <!-- <a href=""><li>Book a service</li></a> -->
-                <a href=""><li>Login</li></a>
-                <a href=""><li>Sign up</li></a>
+              {% if current_user.is_authenticated %}
+                <a href="{{ url_for('logout') }}"><li>Logout</li></a>
+              {% else %}
+                <a href="{{ url_for('login')}}"><li>Login</li></a>
+                <a href="{{ url_for('signup')}}"><li>Sign up</li></a>
+              {% endif %}
                 <!-- <a href=""><li>Log out</li></a> -->
                 </ul>
             </nav>

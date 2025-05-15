@@ -45,3 +45,8 @@ class ContactForm(FlaskForm):
     message = CKEditorField('Message', validators=[DataRequired()])
     submit = SubmitField('Send')
 
+class CommunityUploadForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired()])
+    content = CKEditorField('Content', validators=[DataRequired()])
+    image = FileField('Image', validators=[FileAllowed(['jpg', 'png', 'jpeg'])])
+    submit = SubmitField('Submit')
